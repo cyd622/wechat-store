@@ -1,0 +1,43 @@
+body {
+  font-family: Roboto,Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #83939C;
+}
+
+html, body {
+  padding:0;
+  margin:0;
+}
+
+body[class*=preset-white] #section-header {
+  background-color: #FFF;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+ul.menu {
+  border: none;
+  list-style: none;
+  text-align: left;
+}
+
+.container {
+  max-width: 980px !important;
+}
+
+.gray-image {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+
+  filter: grayscale(100%);
+  filter: gray;
+}
