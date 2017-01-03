@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Repositories\TagRepositoryEloquent;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -11,10 +13,12 @@ class PagesController extends Controller
 
     }
 
-    public function index()
+    public function index(TagRepositoryEloquent $TagRepository)
     {
 
-        return view('pages.index');
+        $tags = $TagRepository->all();
+
+        return view('pages.index', compact('tags'));
     }
 
     public function show()

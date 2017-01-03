@@ -10853,6 +10853,11 @@ ul.menu {
   padding: 10px 5px;
 }
 
+.wxapp-nav li a {
+  color: #83939C;
+  cursor: pointer;
+}
+
 .jumbotron {
   padding: 0;
   margin-bottom: 0;
