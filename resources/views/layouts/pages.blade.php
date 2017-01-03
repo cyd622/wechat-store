@@ -26,8 +26,6 @@
 
     @include('pages.partials.appnav')
 
-    @include('pages.partials.board')
-
     @yield('content')
 
     <!-- Scripts -->

@@ -10776,6 +10776,10 @@ ul.menu {
   filter: gray;
 }
 
+.bg-white {
+  background: #ffffff;
+}
+
 #block-tl-general-user-links-tl-general .content {
   float: right;
 }
@@ -10943,6 +10947,202 @@ ul.menu {
   background: #EEEEEE;
   font-size: 12px;
   font-weight: 400;
+}
+
+.app-detail {
+  margin: 30px;
+}
+
+.app-detail .app-main-left {
+  background: #ffffff;
+  min-height: 600px;
+}
+
+.app-detail .app-info {
+  padding: 20px;
+}
+
+.app-detail .app-info .icon img {
+  width: 120px;
+}
+
+.app-detail .app-info .info {
+  margin-left: 30px;
+}
+
+.app-detail .app-info .info h1 {
+  font-size: 1.4em;
+  color: #333;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.app-detail .app-info .info .tags {
+  margin-top: 10px;
+}
+
+.app-detail .app-info .info .tags span {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  background: #EEEEEE;
+}
+
+.app-detail .app-info .rating {
+  font-size: 12px;
+  width: 150px;
+  text-align: right;
+}
+
+.app-detail .app-info .rating .numbers {
+  display: inline-block;
+  margin-right: 3px;
+  margin-left: 5px;
+}
+
+.app-detail .app-info .rating > div {
+  display: inline-block;
+}
+
+.app-detail .images-list img {
+  max-height: 250px;
+}
+
+.app-detail .app-comments .score-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.app-detail .app-comments .score-container .score {
+  color: #333;
+  font-size: 48px;
+  font-weight: 100;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+.app-detail .app-comments .score-container-star-rating {
+  height: 24px;
+  margin: 0 0 8px 2px;
+}
+
+.app-detail .app-comments .score-container .reviews-stats {
+  color: #8d8d8d;
+}
+
+.app-detail .app-comments .rating-histogram {
+  width: 425px;
+}
+
+.app-detail .app-comments .rating-histogram {
+  padding: 20px 20px 20px 30px;
+}
+
+.app-detail .app-comments .rating-bar-container {
+  margin-bottom: 2px;
+}
+
+.app-detail .app-comments .rating-box .rating-bar-container {
+  color: #737373;
+  height: 23px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+}
+
+.app-detail .app-comments .rating-bar-container .bar {
+  opacity: .8;
+  filter: alpha(opacity=80);
+  -webkit-transition: width .25s ease;
+  transition: width .25s ease;
+  display: inline-block;
+  height: 100%;
+}
+
+.app-detail .app-comments .rating-box .bar-label {
+  font-size: 11px;
+  left: -28px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 4px;
+}
+
+.app-detail .app-comments .rating-box .bar-label .star-tiny {
+  left: -2px;
+  position: relative;
+  top: -2px;
+}
+
+.app-detail .app-comments .rating-box .bar-number {
+  color: #333;
+  font-size: 11px;
+  left: 5px;
+  position: absolute;
+  top: 4px;
+}
+
+.app-detail .app-comments .rating-bar-container.five .bar {
+  background: #88b131;
+}
+
+.app-detail .app-comments .rating-bar-container.four .bar {
+  background: #99cc00;
+}
+
+.app-detail .app-comments .rating-bar-container.three .bar {
+  background: #ffcf02;
+}
+
+.app-detail .app-comments .rating-bar-container.two .bar {
+  background: #ff9f02;
+}
+
+.app-detail .app-comments .rating-bar-container.one .bar {
+  background: #ff6f31;
+}
+
+.app-detail .app-hot-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-detail .app-hot-list ul li {
+  margin-bottom: 15px;
+}
+
+.app-detail .app-hot-list ul li img {
+  width: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+.app-detail .app-hot-list ul li .title {
+  padding-top: 5px;
+}
+
+.box .box-header {
+  height: 46px;
+  padding-top: 10px;
+  background: #ffffff;
+  padding-left: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.box .box-header h2 {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  line-height: 35px;
+  border-bottom: 1px solid #444;
+  margin: 0;
+}
+
+.box .box-content {
+  padding: 20px;
+  background: #ffffff;
 }
 
 @font-face {

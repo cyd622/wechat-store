@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('pages.partials.board')
+
     <div class="app-lists">
 
         <div class="container">

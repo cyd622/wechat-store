@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWxappIconsTable extends Migration
+class AddIconAndQrcodeToWxappsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateWxappIconsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wxapp_icons', function(Blueprint $table) {
+        Schema::table('wxapps', function(Blueprint $table) {
 
-            $table->increments('id');
-            $table->integer('wxapp_id')->index();
-            $table->string('image');
+            $table->string('qrcode')->nullable();
+            $table->string('icon')->nullable();
 
-            $table->timestamps();
         });
     }
 
@@ -30,6 +28,11 @@ class CreateWxappIconsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wxapp_icons');
+        Schema::table('wxapps', function(Blueprint $table) {
+
+            $table->dropColumn('qrcode');
+            $table->dropColumn('icon');
+
+        });
     }
 }
