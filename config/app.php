@@ -180,6 +180,16 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Develop Plugin
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        // Repository
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
     ],
 
     /*
