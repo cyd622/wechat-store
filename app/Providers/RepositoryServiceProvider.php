@@ -24,6 +24,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(\App\Repositories\TagRepository::class, \App\Repositories\TagRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\WxappRepository::class, \App\Repositories\WxappRepositoryEloquent::class);
         //:end-bindings:
     }
 }

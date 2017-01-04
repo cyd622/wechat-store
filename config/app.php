@@ -190,6 +190,7 @@ return [
         // Repository
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
+        App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

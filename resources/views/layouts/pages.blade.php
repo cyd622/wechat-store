@@ -24,7 +24,9 @@
 <div id="app">
     @include('layouts.partials.header')
 
-    @include('pages.partials.appnav')
+    {{--@include('pages.partials.appnav')--}}
+
+    @include('widgets.tags')
 
     @yield('content')
 
