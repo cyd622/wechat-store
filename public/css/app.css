@@ -10780,6 +10780,30 @@ ul.menu {
   background: #ffffff;
 }
 
+.page {
+  text-align: center;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: #b4b4b4;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  z-index: 3;
+  color: #e4e4e4;
+  border-color: #e4e4e4;
+  background-color: transparent;
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+  color: #b4b4b4;
+  background-color: #fff;
+  border-color: #e4e4e4;
+  cursor: not-allowed;
+}
+
 #block-tl-general-user-links-tl-general .content {
   float: right;
 }
@@ -10826,6 +10850,18 @@ ul.menu {
   padding-bottom: 34px;
 }
 
+.nothing {
+  background: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.nothing h3 {
+  font-size: 2em;
+}
+
 #footer {
   border-bottom: 1px solid #f2f2f2;
   background: #ffffff;
@@ -10856,6 +10892,15 @@ ul.menu {
 .wxapp-nav li a {
   color: #83939C;
   cursor: pointer;
+}
+
+.wxapp-nav li a:hover {
+  text-decoration: none;
+}
+
+.wxapp-nav li.active a {
+  color: #333;
+  border-bottom: 2px solid #333;
 }
 
 .jumbotron {
@@ -10928,7 +10973,8 @@ ul.menu {
 }
 
 .app-lists .app-item .icon img {
-  max-width: 120px;
+  width: 120px;
+  height: 120px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -10952,6 +10998,7 @@ ul.menu {
   background: #EEEEEE;
   font-size: 12px;
   font-weight: 400;
+  margin: 3px;
 }
 
 .app-detail {

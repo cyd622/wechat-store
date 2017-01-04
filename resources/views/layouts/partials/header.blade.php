@@ -48,7 +48,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="{{ route('index') }}">
                             <img class="logo" src="{{ cdn('images/logo.png') }}">
                         </a>
                     </div>
@@ -74,7 +74,7 @@
 
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">商店首页</a></li>
+                            <li><a href="{{ route('index') }}">商店首页</a></li>
                             <li><a href="#">小程序资讯</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发者社区 <span class="caret"></span></a>

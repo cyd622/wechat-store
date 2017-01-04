@@ -7,6 +7,11 @@ function insanity_check()
     }
 }
 
+function qiniu_cdn($filepath)
+{
+    return config('app.qiniu_static') . $filepath;
+}
+
 function cdn($filepath)
 {
     if (config('app.url_static')) {

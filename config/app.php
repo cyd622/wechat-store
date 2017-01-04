@@ -54,6 +54,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
     'url_static'  => env('URL_STATIC'),
     'user_static' => env('USER_STATIC'),
+    'qiniu_static' => env('QINIU_STATIC'),
 
     /*
     |--------------------------------------------------------------------------

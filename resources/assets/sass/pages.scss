@@ -17,6 +17,17 @@
           color: #83939C;
           cursor: pointer;
         }
+
+        a:hover {
+          text-decoration: none;
+        }
+    }
+
+    li.active {
+      a {
+        color: #333;
+        border-bottom:2px solid #333;
+      }
     }
 }
 
@@ -94,7 +105,8 @@
         }
 
         .icon img {
-            max-width: 120px;
+            width: 120px;
+            height:120px;
             margin-top: 20px;
             margin-bottom:20px;
         }
@@ -119,6 +131,7 @@
                 background: #EEEEEE;
                 font-size:12px;
                 font-weight:400;
+                margin:3px;
             }
         }
     }

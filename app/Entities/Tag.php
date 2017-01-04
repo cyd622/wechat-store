@@ -12,4 +12,9 @@ class Tag extends Model implements Transformable
 
     protected $fillable = [];
 
+    public function wxapps()
+    {
+        return $this->belongsToMany('App\Entities\Wxapp', 'wxapp_tag', 'tag_id', 'wxapp_id');
+    }
+
 }

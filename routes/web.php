@@ -13,7 +13,8 @@
 
 Auth::routes();
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/tag/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/app/{id}', 'PagesController@show');
 
 

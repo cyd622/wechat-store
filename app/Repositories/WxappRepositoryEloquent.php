@@ -31,7 +31,6 @@ class WxappRepositoryEloquent extends BaseRepository implements WxappRepository
     */
     public function validator()
     {
-
         return WxappValidator::class;
     }
 
@@ -43,4 +42,10 @@ class WxappRepositoryEloquent extends BaseRepository implements WxappRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
+
+    public function getFromeCache()
+    {
+        return $this->model->paginate(12);
+    }
+
 }

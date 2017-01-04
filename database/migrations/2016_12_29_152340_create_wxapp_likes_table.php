@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWxappTagsTable extends Migration
+class CreateWxappLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateWxappTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wxapp_tags', function(Blueprint $table) {
+        Schema::create('wxapp_like', function(Blueprint $table) {
 
             $table->increments('id');
             $table->integer('wxapp_id')->index();
-            $table->integer('tag_id')->index();
+            $table->integer('user_id')->index();
 
-            $table->index(['wxapp_id', 'tag_id']);
             $table->timestamps();
 
         });
@@ -32,6 +31,6 @@ class CreateWxappTagsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wxapp_tags');
+        Schema::drop('wxapp_like');
     }
 }
