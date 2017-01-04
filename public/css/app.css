@@ -10841,8 +10841,8 @@ ul.menu {
 }
 
 #section-header .logo {
-  max-height: 34px;
-  margin-top: 15px;
+  max-height: 28px;
+  margin-top: 17px;
 }
 
 #section-header .navbar-nav > li > a {
@@ -11039,6 +11039,7 @@ ul.menu {
   font-size: 12px;
   font-weight: 400;
   background: #EEEEEE;
+  margin-right: 5px;
 }
 
 .app-detail .app-info .rating {

@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/tag/{tagId}', 'PagesController@tag')->name('tag');
-Route::get('/app/{id}', 'PagesController@show');
+Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 
 
 Route::get('/home', 'HomeController@index');

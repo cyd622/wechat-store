@@ -23,7 +23,17 @@ class Wxapp extends Model implements Transformable
 
     public function getRatingAttribute()
     {
-        return sprintf("%.2f", $this->attributes['rating']);
+        return sprintf("%.1f", $this->attributes['rating']);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Entities\WxappRating');
+    }
+
+    public function screenShots()
+    {
+        return $this->hasMany('App\Entities\WxappScreenshot');
     }
 
 }

@@ -12,17 +12,13 @@
                     <div class="app-main-left">
                         <div class="app-info">
                             <div class="icon pull-left">
-                                <img src="http://media.ifanrusercontent.com/media/user_files/trochili/bd/32/bd3223a06dc435179a0326c2d45721b9d844e015-4ee8d89f7aa0b8ca04f5c4e71dd2f4e8754facb9.png" />
+                                <img src="{{ qiniu_cdn($currentWxapp->icon) }}" />
                             </div>
 
                             <div class="pull-right">
                                 <div class="rating">
                                     <div class="starts">
-                                        <i class="fa fa-star start" aria-hidden="true"></i>
-                                        <i class="fa fa-star start" aria-hidden="true"></i>
-                                        <i class="fa fa-star start" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
+                                        {!! $currentWxapp->present()->genStarts() !!}
                                     </div>
 
                                     <div class="count">
@@ -33,14 +29,11 @@
                             </div>
 
                             <div class="info pull-left">
-                                <h1 class="title">天天练口语</h1>
-                                <div class="author">沪江 于 12-28 17:32 发布</div>
+                                <h1 class="title">{{ $currentWxapp->title }}</h1>
+                                <div class="author">{!! $currentWxapp->present()->genAuthor() !!}</div>
 
                                 <div class="tags">
-                                    <span>教育</span>
-                                    <span>工具</span>
-                                    <span>富媒体</span>
-                                    <span>IT 科技</span>
+                                    {!! $currentWxapp->present()->genTags() !!}
                                 </div>
                             </div>
 
@@ -49,32 +42,33 @@
 
                         <div class="box">
                             <div class="box-header">
-                                <h2>天天练口语 截图</h2>
+                                <h2>{{ $currentWxapp->title }} 截图</h2>
                             </div>
 
                             <div class="box-content">
                                 <div class="images-list">
-                                    <img src="http://media.ifanrusercontent.com/media/user_files/trochili/6d/45/6d45887b77cfbd1518032aa34d0e389f717b5d66-9b944fb9e594ed9a046cdbdc512a4affd955c143.png">
-                                    <img src="http://media.ifanrusercontent.com/media/user_files/trochili/d9/74/d974ec1768daf936f4db3fc8495336b958f6569a-35d2cf9558857c8f153be01aa51d8675d4434931.jpg">
+                                    @foreach($currentWxapp->screenShots as $item)
+                                    <img src="{{ qiniu_cdn($item->image) }}" />
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
 
                         <div class="box">
                             <div class="box-header">
-                                <h2>天天练口语 介绍</h2>
+                                <h2>{{ $currentWxapp->title }} 介绍</h2>
                             </div>
 
                             <div class="box-content">
                                 <div class="description">
-                                    天天练口语，提供轻量级、多样化的口语练习服务，趣味与实用结合的口语学习模式，让口语练习不再枯燥！
+                                    {{ $currentWxapp->description }}
                                 </div>
                             </div>
                         </div>
 
                         <div class="box">
                             <div class="box-header">
-                                <h2>天天练口语 用户评价</h2>
+                                <h2>{{ $currentWxapp->title }} 用户评价</h2>
                             </div>
 
                             <div class="box-content">
@@ -83,18 +77,14 @@
                                     <div class="rating">
 
                                         <div class="col-md-3 score-container">
-                                            <div class="score">4.9</div>
+                                            <div class="score">{{ $currentWxapp->rating }}</div>
                                             <div class="score-container-star-rating">
                                                 <div class="starts">
-                                                    <i class="fa fa-star start" aria-hidden="true"></i>
-                                                    <i class="fa fa-star start" aria-hidden="true"></i>
-                                                    <i class="fa fa-star start" aria-hidden="true"></i>
-                                                    <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                                    <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
+                                                    {!! $currentWxapp->present()->genStarts() !!}
                                                 </div>
                                             </div>
                                             <div class="reviews-stats">
-                                                共收到 13 份评价
+                                                共 {{ $currentWxapp->comments()->count() }} 份评价
                                             </div>
                                         </div>
 
@@ -153,14 +143,14 @@
                     <div class="app-sidebar">
                         <div class="box">
                             <div class="box-header">
-                                <h2>天天练口语 信息</h2>
+                                <h2>{{ $currentWxapp->title }}小程序二维码</h2>
                             </div>
 
                             <div class="box-content">
                                 
                                 <div class="qrcode">
                                     <p>使用微信扫码体验</p>
-                                    <img src="http://media.ifanrusercontent.com/media/user_files/trochili/9f/87/9f8765fb81089ba50021dda617162198e6b76b26-549b414753389eaeaa84ba2581aa7380cd86b0b3.jpg" alt="">
+                                    <img src="{{ qiniu_cdn($currentWxapp->qrcode) }}" alt="">
                                 </div>
                             </div>
                         </div>

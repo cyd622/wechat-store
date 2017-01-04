@@ -36,9 +36,14 @@ class PagesController extends Controller
         return view('pages.index', compact('wxapps', 'currentTag'));
     }
 
-    public function show()
+    public function show($id)
     {
+        $currentWxapp = $this->wxappRepository->find($id);
 
-        return view('pages.show');
+        if(!$currentWxapp)
+            abort(404);
+
+
+        return view('pages.show', compact('currentWxapp'));
     }
 }

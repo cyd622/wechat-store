@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('widgets.tags')
+
     @include('pages.partials.board')
 
     <div class="app-lists">

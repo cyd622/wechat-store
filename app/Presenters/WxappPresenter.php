@@ -2,6 +2,7 @@
 
 namespace App\Presenters;
 
+use App\Repositories\UserRepositoryEloquent;
 use App\Transformers\WxappTransformer;
 use Laracasts\Presenter\Presenter;
 
@@ -74,6 +75,20 @@ class WxappPresenter extends Presenter
             $html .= '<i class="fa fa-star-o start start-empty" aria-hidden="true"></i>';
             $i++;
         }
+
+        return $html;
+    }
+
+    public function genAuthor()
+    {
+        $userRepostiory = app(UserRepositoryEloquent::class);
+        $html = '';
+
+        if($this->user_id && $user = $userRepostiory->find($this->user_id)) {
+            $html .= $user->name.' 于 ';
+        }
+
+        $html .= $this->created_at.' 发布';
 
         return $html;
     }
