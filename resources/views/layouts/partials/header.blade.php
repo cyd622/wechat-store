@@ -21,10 +21,13 @@
                 <div id="block-tl-general-user-links-tl-general" class="block block-tl-general">
                     <div class="inner"></div>
 
-                    <div class="content">
+                    <div class="content login-btns">
                         <a href="/register">注册</a>&nbsp;&nbsp; &nbsp; &nbsp;
-                        <a href="/login">登录</a>
+                        <a href="/login" class="login">登录</a>
+                        <div class="clearfix"></div>
                     </div>
+
+                    <div class="clearfix"></div>
                 </div>
 
             </div>

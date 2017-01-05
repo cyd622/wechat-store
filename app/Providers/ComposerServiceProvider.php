@@ -16,6 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('widgets.tags', 'App\Http\ViewComposers\TagsComposer');
+        View::composer('widgets.auth_bg', 'App\Http\ViewComposers\AuthBgComposer');
     }
 
     public function register()

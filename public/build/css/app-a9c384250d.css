@@ -10809,17 +10809,6 @@ ul.menu {
   padding-right: 2px;
 }
 
-#block-tl-general-user-links-tl-general .content {
-  float: right;
-}
-
-#block-tl-general-user-links-tl-general .content a {
-  color: #515050;
-  position: relative;
-  top: 0.5em;
-  font-size: 0.8em;
-}
-
 #section-top {
   border-bottom: 1px solid #f2f2f2;
   background: #fff;
@@ -10829,6 +10818,18 @@ ul.menu {
 #section-top .region-social-top .content {
   line-height: 40px;
   font-size: 12px;
+}
+
+#section-top .login-btns {
+  float: right;
+}
+
+#section-top .login-btns a {
+  display: inline-block;
+  color: #515050;
+  position: relative;
+  top: 0.5em;
+  font-size: 0.8em;
 }
 
 #section-header > .container {
@@ -10857,7 +10858,7 @@ ul.menu {
 
 #section-header .nav > li > a {
   padding-right: 0;
-  paddin-left: 20px !important;
+  padding-left: 30px !important;
 }
 
 .nothing {
@@ -10870,6 +10871,17 @@ ul.menu {
 
 .nothing h3 {
   font-size: 2em;
+}
+
+.user-auth .login-wrap .panel {
+  margin-top: 20%;
+  border: none;
+}
+
+.user-auth .login-wrap .panel-heading {
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
 }
 
 #footer {

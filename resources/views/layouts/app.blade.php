@@ -15,11 +15,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@section('title')微信小程序商店@show - WX小程序 - Powered by WxStore</title>
+    <meta name="keywords" content="@section('keywords') @show小程序, 微信小程序, wewx, WX小程序, 开发, 教程, 推广, 微信应用号, 微信, 商店, 市场, 小程序商店, 小程序大全, 小程序发布站" />
+    <meta name="author" content="WxStore" />
+    <meta name="description" content="@section('description') WX小程序，微信小程序商店。您可以第一时间体验到最新最好的小程序。您可以在这里发布您的小程序，让你的小程序无人不知。 @show" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ cdn(elixir('css/app.css')) }}">
@@ -27,72 +29,61 @@
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
+                'csrfToken' => csrf_token(),
         ]); ?>
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+<div id="app" class="user-auth">
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+    <div id="section-header" class="sticky-wrapper">
+        <div class="container">
+            <div class="row">
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{ route('index') }}">
+                                <img class="logo" src="{{ cdn('images/logo.png') }}">
+                            </a>
+                        </div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/register">注册</a></li>
+                                <li><a href="/login">登录</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .navbar-collapse -->
+                    </div>
+                    <!-- End.container-fluid -->
+                </nav>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
             </div>
-        </nav>
-
-        @yield('content')
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ cdn(elixir('/js/app.js')) }}"></script>
+    @yield('content')
+
+</div>
+
+@include('widgets.auth_bg')
+
+<!-- Scripts -->
+<script src="{{ cdn('/js/sweetalert.min.js') }}"></script>
+<script src="{{ cdn('/js/social-share.min.js') }}"></script>
+<script src="{{ cdn(elixir('js/app.js')) }}"></script>
+<script src="{{ cdn(elixir('js/main.js')) }}"></script>
+
 </body>
 </html>
