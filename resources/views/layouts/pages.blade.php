@@ -40,7 +40,7 @@
     @yield('content')
 
     <!-- Scripts -->
-    <script src="{{ cdn(elixir('/js/app.js')) }}"></script>
+    <script src="{{ cdn(elixir('js/app.js')) }}"></script>
 
     @include('layouts.partials.footer')
 </div>
