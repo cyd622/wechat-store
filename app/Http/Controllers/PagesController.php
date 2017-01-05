@@ -31,7 +31,7 @@ class PagesController extends Controller
     public function tag($tagId)
     {
         $currentTag = $this->tagRepository->find($tagId);
-        $wxapps = $currentTag->wxapps()->paginate(12);
+        $wxapps = $currentTag->wxapps()->orderBy('id', 'desc')->paginate(12);
 
         return view('pages.index', compact('wxapps', 'currentTag'));
     }

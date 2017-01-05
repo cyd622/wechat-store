@@ -8,7 +8,6 @@
 
 namespace App\Http\ViewComposers;
 
-use App\Repositories\TagRepositoryEloquent;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 
