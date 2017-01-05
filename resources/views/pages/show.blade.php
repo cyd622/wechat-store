@@ -33,7 +33,7 @@
                                 <div class="author">{!! $currentWxapp->present()->genAuthor() !!}</div>
 
                                 <div class="tags">
-                                    {!! $currentWxapp->present()->genTags() !!}
+                                    {!! $currentWxapp->present()->genTags(5) !!}
                                 </div>
                             </div>
 

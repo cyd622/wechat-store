@@ -10762,10 +10762,6 @@ ul.menu {
   text-align: left;
 }
 
-.container {
-  max-width: 980px !important;
-}
-
 .gray-image {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -10802,6 +10798,11 @@ ul.menu {
   background-color: #fff;
   border-color: #e4e4e4;
   cursor: not-allowed;
+}
+
+.starts .start {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #block-tl-general-user-links-tl-general .content {
@@ -10848,6 +10849,11 @@ ul.menu {
 #section-header .navbar-nav > li > a {
   padding-top: 34px;
   padding-bottom: 34px;
+}
+
+#section-header .nav > li > a {
+  padding-right: 0;
+  paddin-left: 20px;
 }
 
 .nothing {
@@ -10981,7 +10987,7 @@ ul.menu {
 
 .app-lists .app-item .rating .line {
   display: inline-block;
-  width: 30px;
+  width: 14%;
   height: 6px;
   border-top: 1px solid #eee;
   margin: 0 6px;

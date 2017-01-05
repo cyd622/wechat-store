@@ -75,17 +75,8 @@
 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{{ route('index') }}">商店首页</a></li>
-                            <li><a href="#">小程序资讯</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发者社区 <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </li>
+                            {{--<li><a href="#">小程序资讯</a></li>--}}
+                            <li><a href="#">小程序社区</a></li>
                         </ul>
                     </div>
                     <!-- End .navbar-collapse -->

@@ -18,4 +18,9 @@ Route::get('/tag/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 
 
+Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
+
+});
+
+
 Route::get('/home', 'HomeController@index');

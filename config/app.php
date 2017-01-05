@@ -192,6 +192,8 @@ return [
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
         App\Providers\ComposerServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
+
     ],
 
     /*
