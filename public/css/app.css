@@ -10762,6 +10762,10 @@ ul.menu {
   text-align: left;
 }
 
+.container {
+  max-width: 1020px !important;
+}
+
 .gray-image {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -10842,18 +10846,18 @@ ul.menu {
 }
 
 #section-header .logo {
-  max-height: 28px;
-  margin-top: 17px;
+  max-height: 24px;
+  margin-top: 12px;
 }
 
 #section-header .navbar-nav > li > a {
-  padding-top: 34px;
-  padding-bottom: 34px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 #section-header .nav > li > a {
   padding-right: 0;
-  paddin-left: 20px;
+  paddin-left: 20px !important;
 }
 
 .nothing {
