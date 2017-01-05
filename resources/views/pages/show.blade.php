@@ -1,16 +1,12 @@
 @extends('layouts.pages')
 
-@section('title')
-{{ $currentWxapp->title }}：在 微信小程序商店 上的内容 @parent
-@stop
+@section('title'){{ $currentWxapp->title }}：在 微信小程序商店 上的内容 @parent @stop
 
 @section('description')
 阅读评论、比较用户评分、查看小程序屏幕快照并进一步了解“{{ $currentWxapp->title }}”。 微信扫描“{{ $currentWxapp->title }}”小程序二维码，即刻在微信上尽情体验“{{ $currentWxapp->title }}”小程序。
 @stop
 
-@section('keywords')
-{{ $currentWxapp->title }}, {{ $currentWxapp->title }}小程序评价,
-@stop
+@section('keywords'){{ $currentWxapp->title }}, {{ $currentWxapp->title }}小程序评价,@stop
 
 @section('content')
 
