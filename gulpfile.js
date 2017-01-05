@@ -25,18 +25,23 @@ elixir(mix => {
 
         .copy('node_modules/font-awesome/fonts', 'public/build/fonts')
         .copy('node_modules/social-share.js/dist/fonts', 'public/build/fonts/iconfont')
+        .copy('node_modules/sweetalert/dist/sweetalert.min.js', 'public/js/sweetalert.min.js')
+        .copy('node_modules/social-share.js/dist/js/social-share.min.js', 'public/js/social-share.min.js')
 
-        //.webpack('app.js')
-        .webpack(
-            'app.js',
-            './public/js/app_tmp.js'
-        )
+        .webpack('app.js')
+        .webpack('main.js')
 
-        .scripts(basejs.concat(['public/js/app_tmp.js']), 'public/js/app.js', './')
+        //.webpack(
+        //    'app.js',
+        //    './public/js/app_tmp.js'
+        //)
+
+        //.scripts(basejs.concat(['public/js/app_tmp.js']), 'public/js/app.js', './')
 
         .version([
             'public/css/app.css',
             'public/js/app.js',
+            'public/js/main.js',
         ])
 
     if (production) {

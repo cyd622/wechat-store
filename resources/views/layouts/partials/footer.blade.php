@@ -7,7 +7,7 @@
                     <div class="pull-left">
                         <img src="{{ cdn('images/logo.png') }}" class="footer-logo gray-image">
 
-                        <p>第一时间知道最新最好的小程序。</p>
+                        <p>第一时间体验最新最好的微信小程序。</p>
                         <p>鄂ICP备12006553号-5</p>
                     </div>
 
