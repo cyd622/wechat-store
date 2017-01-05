@@ -45,7 +45,7 @@ class WxappRepositoryEloquent extends BaseRepository implements WxappRepository
 
     public function getFromeCache()
     {
-        return $this->model->with('tags')->paginate(12);
+        return $this->model->paginate(12);
     }
 
 }
