@@ -24,6 +24,7 @@ class AuthBgComposer
     {
         if(!$bgId = Session::get('bg_id')) {
             $bgId = mt_rand(1, 10);
+            Session::set('bg_id', $bgId);
         }
 
         $view->with('bgId', $bgId);
