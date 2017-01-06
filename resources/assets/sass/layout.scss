@@ -7,13 +7,20 @@
 
 // top
 #section-top {
-  border-bottom: 1px solid #f2f2f2;
   background: #fff;
-  height:40px;
+  background: #3f474e;
+
+  color: #fff;
+  font-size:12px;
+  line-height: 28px;
+
+  a {
+    color: #fff;
+    font-size:12px;
+  }
 
   .region-social-top .content {
-    line-height: 40px;
-    font-size:12px;
+
   }
 
   .login-btns {
@@ -21,10 +28,8 @@
 
     a {
       display: inline-block;
-      color: #515050;
       position: relative;
-      top: 0.5em;
-      font-size: 0.8em;
+      margin-left:20px;
     }
   }
 }

@@ -8,7 +8,7 @@
                     <div class="inner"></div>
 
                     <div class="content">
-                        发布小程序, 从WEWX开始, 让你的小程序人尽皆知!
+                        <span>发布小程序, 从WEWX开始, 让你的小程序人尽皆知!</span>
                     </div>
                 </div>
 
@@ -22,9 +22,7 @@
                     <div class="inner"></div>
 
                     <div class="content login-btns">
-                        <a href="/register">注册</a>&nbsp;&nbsp; &nbsp; &nbsp;
-                        <a href="/login" class="login">登录</a>
-                        <div class="clearfix"></div>
+                        <a href="https://jq.qq.com/?_wv=1027&k=43PHRrn" target="_blank">群: 538083326</a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -58,28 +56,15 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        {{--<ul class="nav navbar-nav">--}}
-                            {{--<li class="active"><a href="#">Link</a></li>--}}
-                            {{--<li><a href="#">Link</a></li>--}}
-                            {{--<li class="dropdown">--}}
-                                {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>--}}
-                                {{--<ul class="dropdown-menu" role="menu">--}}
-                                    {{--<li><a href="#">Action</a></li>--}}
-                                    {{--<li><a href="#">Another action</a></li>--}}
-                                    {{--<li><a href="#">Something else here</a></li>--}}
-                                    {{--<li class="divider"></li>--}}
-                                    {{--<li><a href="#">Separated link</a></li>--}}
-                                    {{--<li class="divider"></li>--}}
-                                    {{--<li><a href="#">One more separated link</a></li>--}}
-                                {{--</ul>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ route('index') }}">商店首页</a></li>
+                            <li><a href="#">小程序社区</a></li>
+                        </ul>
 
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{ route('index') }}">商店首页</a></li>
-                            {{--<li><a href="#">小程序资讯</a></li>--}}
-                            <li><a href="#">小程序社区</a></li>
+                            <li><a href="/register">注册</a></li>
+                            <li><a href="/login">登录</a></li>
                         </ul>
                     </div>
                     <!-- End .navbar-collapse -->
