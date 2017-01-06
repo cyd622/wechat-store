@@ -42,10 +42,12 @@ class WxappController extends ApiController
         Log::debug('wxapp 入库接口');
 
         $data = $request->all();
-        $data = array_merge($data, ['rating' => 0, 'likes' => 0, 'status' => 1]);
+        $data = array_merge($data, [
+            'rating' => 0, 'likes' => 0, 'status' => 1,
+            'name' => implode('-', $this->py->convert($data['title']))
+        ]);
 
         Log::debug('data', $data);
-
 
         $wxapp = $this->wxappRepository->updateOrCreate([
             'source' => $request->get('source', ''),
