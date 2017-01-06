@@ -3,7 +3,6 @@
 <script src="{{ cdn('/js/sweetalert.min.js') }}"></script>
 <script src="{{ cdn('/js/social-share.min.js') }}"></script>
 <script src="{{ cdn(elixir('js/app.js')) }}"></script>
-<script src="{{ cdn(elixir('js/vue.js')) }}"></script>
 
 <!-- 统计代码 -->
 <div style="display: none"><script src="{{ cdn(elixir('js/19083481.js')) }}"></script></div>
