@@ -54,10 +54,16 @@
                             </div>
 
                             <div class="box-content">
-                                <div class="images-list">
-                                    @foreach($currentWxapp->screenShots as $item)
-                                    <img src="{{ qiniu_cdn($item->image) }}" />
-                                    @endforeach
+                                <div class="screen-shots">
+                                    <div class="images-list">
+                                        <ul>
+                                            @foreach($currentWxapp->screenShots as $item)
+                                                <li class="screen-img">
+                                                    <img src="{{ qiniu_cdn($item->image) }}" />
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

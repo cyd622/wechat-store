@@ -11,6 +11,11 @@ html, body {
   margin:0;
 }
 
+ul {
+  margin:0;
+  padding:0;
+}
+
 body[class*=preset-white] #section-header {
   background-color: #FFF;
 }

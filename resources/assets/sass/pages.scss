@@ -192,9 +192,23 @@
     }
   }
 
-  .images-list {
-    img {
-      max-height:250px;
+  .screen-shots {
+    width: 695px;
+    overflow-x: auto;
+    white-space:nowrap;
+
+    .images-list {
+      width: 100%;
+
+      ul li {
+        display: inline-block;
+        padding-bottom:10px;
+
+        img {
+          max-height: 320px;
+          padding:10px;
+        }
+      }
     }
   }
 
