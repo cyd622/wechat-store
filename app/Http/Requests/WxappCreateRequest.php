@@ -24,7 +24,13 @@ class WxappCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'user_id' => 'required',
+            'description' => 'required',
+            'qrcode' => 'required',
+            'icon' => 'required',
+            'source' => 'required',
+            'source_id' => 'required',
         ];
     }
 }

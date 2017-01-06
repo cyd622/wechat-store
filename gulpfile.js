@@ -42,15 +42,13 @@ elixir(mix => {
             'public/js/app.js'
         ])
 
-    //if (production) {
-    //    mix.compress();
-    //}
-
-    mix.browserSync({
-        proxy: 'wewx.app',
-        browser: 'google-chrome',
-        logConnections  : false,
-        reloadOnRestart : false,
-        notify          : false
-    })
+    if (!production) {
+        mix.browserSync({
+            proxy: 'wewx.app',
+            browser: 'google-chrome',
+            logConnections  : false,
+            reloadOnRestart : false,
+            notify          : false
+        })
+    }
 })

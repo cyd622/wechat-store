@@ -14,7 +14,11 @@ class Wxapp extends Model implements Transformable
 
     protected $presenter = 'App\Presenters\WxappPresenter';
 
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id', 'title', 'description', 'rating',
+        'status', 'created_at', 'updated_at', 'qrcode',
+        'icon', 'likes', 'name', 'source', 'source_id'
+    ];
 
     public function tags()
     {

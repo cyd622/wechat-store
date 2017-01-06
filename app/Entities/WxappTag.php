@@ -6,17 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class Tag extends Model implements Transformable
+class WxappTag extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [
-        'title', 'name', 'color', 'weight'
-    ];
+    protected $table = 'wxapp_tag';
 
-    public function wxapps()
-    {
-        return $this->belongsToMany('App\Entities\Wxapp', 'wxapp_tag', 'tag_id', 'wxapp_id');
-    }
+    protected $fillable = [
+        'wxapp_id', 'tag_id'
+    ];
 
 }
