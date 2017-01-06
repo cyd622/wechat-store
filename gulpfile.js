@@ -42,9 +42,9 @@ elixir(mix => {
             'public/js/app.js'
         ])
 
-    if (production) {
-        mix.compress();
-    }
+    //if (production) {
+    //    mix.compress();
+    //}
 
     mix.browserSync({
         proxy: 'wewx.app',
