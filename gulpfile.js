@@ -29,7 +29,6 @@ elixir(mix => {
         .copy('node_modules/social-share.js/dist/js/social-share.min.js', 'public/js/social-share.min.js')
 
         .webpack('app.js')
-        .webpack('vue.js')
 
         //.webpack(
         //    'app.js',
@@ -40,8 +39,7 @@ elixir(mix => {
 
         .version([
             'public/css/app.css',
-            'public/js/app.js',
-            'public/js/vue.js',
+            'public/js/app.js'
         ])
 
     if (production) {
