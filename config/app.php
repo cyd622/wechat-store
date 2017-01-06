@@ -170,7 +170,6 @@ return [
          * Package Service Providers...
          */
 
-        //
 
         /*
          * Application Service Providers...
@@ -193,6 +192,10 @@ return [
 
         App\Providers\ComposerServiceProvider::class,
         Orangehill\Iseed\IseedServiceProvider::class,
+
+        // oauth
+        Laravel\Passport\PassportServiceProvider::class,
+
 
     ],
 
