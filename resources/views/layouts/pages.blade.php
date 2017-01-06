@@ -53,7 +53,7 @@
 <script src="{{ cdn(elixir('js/app.js')) }}"></script>
 <script src="{{ cdn(elixir('js/main.js')) }}"></script>
 <!-- 统计代码 -->
-<script src="{{ cdn(elixir('js/19083481.js')) }}"></script>
+<div style="display: none"><script src="{{ cdn(elixir('js/19083481.js')) }}"></script></div>
 <!-- 百度Push-->
 <script>
     (function(){
