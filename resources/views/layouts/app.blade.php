@@ -35,45 +35,51 @@
 </head>
 <body>
 
-<div id="app" class="user-auth">
+<div id="app">
 
-    <div id="section-header" class="sticky-wrapper">
-        <div class="container">
-            <div class="row">
+    <div class="">
+        <div class="user-auth">
 
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="{{ route('index') }}">
-                                <img class="logo" src="{{ cdn('images/logo.png') }}">
-                            </a>
-                        </div>
+            <div id="section-header" class="sticky-wrapper">
+                <div class="container">
+                    <div class="row">
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="{{ route('index') }}">
+                                        <img class="logo" src="{{ cdn('images/logo.png') }}">
+                                    </a>
+                                </div>
 
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="/register">注册</a></li>
-                                <li><a href="/login">登录</a></li>
-                            </ul>
-                        </div>
-                        <!-- End .navbar-collapse -->
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/register">注册</a></li>
+                                        <li><a href="/login">登录</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End .navbar-collapse -->
+                            </div>
+                            <!-- End.container-fluid -->
+                        </nav>
+
                     </div>
-                    <!-- End.container-fluid -->
-                </nav>
-
+                </div>
             </div>
+
+            @yield('content')
+
         </div>
     </div>
-
-    @yield('content')
 
 </div>
 

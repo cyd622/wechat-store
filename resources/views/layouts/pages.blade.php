@@ -36,13 +36,18 @@
 </head>
 <body>
 
+
 <div id="app">
 
-    @include('layouts.partials.header')
+    @include('widgets.browsoer_type_tag_start')
 
-    @yield('content')
+        @include('layouts.partials.header')
 
-    @include('layouts.partials.footer')
+        @yield('content')
+
+        @include('layouts.partials.footer')
+
+    @include('widgets.browsoer_type_tag_end')
 
 </div>
 

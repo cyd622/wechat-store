@@ -17,6 +17,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View::composer('widgets.tags', 'App\Http\ViewComposers\TagsComposer');
         View::composer('widgets.auth_bg', 'App\Http\ViewComposers\AuthBgComposer');
+        View::composer('widgets.browsoer_type_tag_start', 'App\Http\ViewComposers\BrowserTypeComposer');
     }
 
     public function register()

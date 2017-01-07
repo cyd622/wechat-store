@@ -22,8 +22,9 @@ class PagesController extends Controller
         $this->wxappRepository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
     }
 
-    public function index()
+    public function index(Request $request)
     {
+
         $wxapps = $this->wxappRepository->getFromeCache();
         return view('pages.index', compact('wxapps'));
     }

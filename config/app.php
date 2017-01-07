@@ -195,6 +195,7 @@ return [
 
         // oauth
         Laravel\Passport\PassportServiceProvider::class,
+        hisorange\BrowserDetect\Provider\BrowserDetectService::class,
 
 
     ],
@@ -245,6 +246,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'BrowserDetect' => hisorange\BrowserDetect\Facade\Parser::class,
     ],
 
 ];
