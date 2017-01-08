@@ -6,6 +6,7 @@ use App\Http\Requests\WxappCreateRequest;
 use App\Repositories\TagRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
 use App\Repositories\WxappTagRepositoryEloquent;
+use App\Repositories\WxappScreenshotRepositoryEloquent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Overtrue\Pinyin\Pinyin;
@@ -17,17 +18,20 @@ class WxappController extends ApiController
     public $wxappRepository;
     public $tagRepository;
     public $wxappTagRepository;
+    public $wxappScreenshotRepository;
     public $py;
 
     public function __construct(
         WxappRepositoryEloquent $wxappRepository,
         TagRepositoryEloquent $tagRepository,
-        WxappTagRepositoryEloquent $wxappTagRepository
+        WxappTagRepositoryEloquent $wxappTagRepository,
+        WxappScreenshotRepositoryEloquent $wxappScreenshotRepository
     )
     {
         $this->wxappRepository = $wxappRepository;
         $this->tagRepository = $tagRepository;
         $this->wxappTagRepository = $wxappTagRepository;
+        $this->wxappScreenshotRepository = $wxappScreenshotRepository;
 
         $this->py = new Pinyin();
     }
@@ -81,6 +85,11 @@ class WxappController extends ApiController
                 $this->wxappTagRepository->updateOrCreate($wxappTagData, $wxappTagData);
 
             }, explode(',', $data['tags']));
+
+            array_map(function ($screens) use ($wxapp){
+                $wxappScreenshot=['wxapp_id' => $wxapp->id,'image' => $screens];
+                $this->wxappScreenshotRepository->updateOrCreate($wxappScreenshot, $wxappScreenshot);
+            }, explode(',', $data['screens']));
         }
 
         return $this->responseSuccess($wxapp);

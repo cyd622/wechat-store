@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Model;
 class WxappScreenshot extends Model
 {
 
-
+    protected $fillable = [
+        'wxapp_id', 'image',
+    ];
 
 }
