@@ -2,7 +2,6 @@
 
 namespace App\Http\ApiControllers;
 
-use App\Http\Requests\WxappCreateRequest;
 use App\Repositories\TagRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
 use App\Repositories\WxappTagRepositoryEloquent;
