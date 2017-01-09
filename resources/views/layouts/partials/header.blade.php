@@ -22,7 +22,7 @@
                     <div class="inner"></div>
 
                     <div class="content login-btns">
-                        <a href="https://jq.qq.com/?_wv=1027&k=43PHRrn" target="_blank">QQ群: 538083326</a>
+                        <a href="https://jq.qq.com/?_wv=1027&k=43PHRrn" target="_blank">点我！加入QQ群: 538083326</a>
                     </div>
 
                     <div class="clearfix"></div>
