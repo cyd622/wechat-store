@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron hidden-xs">
 
     <div class="content">
         <h1>小程序商店</h1>

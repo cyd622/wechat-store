@@ -1,7 +1,6 @@
 <div class="app-item">
     <div class="likes">
         <div class="pull-right">
-            {{--<button type="button" class="btn btn-default btn-sm btn-cx">尝鲜</button>--}}
             <div class="qrcode">
                 <i class="fa fa-qrcode" aria-hidden="true"></i>
             </div>
@@ -33,8 +32,9 @@
     </div>
 
     <div class="tags">
-        {!! $wxapp->present()->genTags(3) !!}
+        {!! $wxapp->present()->genTags($browserType == 'mobile' ? 2 : 3) !!}
     </div>
 
     <div class="clearfix"></div>
 </div>
+

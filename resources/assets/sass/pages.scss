@@ -1,144 +1,153 @@
 
 .wxapp-nav {
-    border-bottom: 1px solid #f2f2f2;
-    background: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+  background: #ffffff;
 
-    ul {
-        list-style: none;
-        padding:0;
-        margin:0;
+  .row {
+    margin:0 -10px;
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    float: left;
+    font-size: 14px;
+    overflow: hidden;
+    text-align: center;
+
+    padding:10px 10px;
+
+    a {
+      color: #83939C;
+      cursor: pointer;
     }
 
-    li {
-        display: inline-block;
-        padding: 10px 5px;
-      
-        a {
-          color: #83939C;
-          cursor: pointer;
-        }
-
-        a:hover {
-          text-decoration: none;
-        }
+    a:hover {
+      text-decoration: none;
     }
+  }
 
-    li.active {
-      a {
-        color: #333;
-        border-bottom:2px solid #333;
-      }
+  li.active {
+    a {
+      color: #333;
+      border-bottom: 2px solid #333;
     }
+  }
 }
 
 .jumbotron {
-    padding:0;
-    margin-bottom:0;
-    position: relative;
+  padding: 0;
+  margin-bottom: 0;
+  position: relative;
 
-    img {
-        width: 100%;
-        height:100%;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
-    .content {
-        position: absolute;
-        z-index: 9;
-        margin: auto;
-        width:100%;
-        text-align: center;
+  .content {
+    position: absolute;
+    z-index: 9;
+    margin: auto;
+    width: 100%;
+    text-align: center;
 
-        color: #333;
-        bottom: 16%;
-    }
+    color: #333;
+    bottom: 16%;
+  }
 
-    h1 {
-        font-size: 3em;
-        font-weight:400;
-    }
+  h1 {
+    font-size: 3em;
+    font-weight: 400;
+  }
 
-    h2 {
-        font-size:16px;
-        font-weight:400;
-        background: #444;
-        padding: 10px 0px;
-        width: 160px;
-        margin: auto;
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    background: #444;
+    padding: 10px 0px;
+    width: 160px;
+    margin: auto;
 
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-        transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    }
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
 
-    h2 a {
-        color: #ffffff;
-        font-weight:400;
-    }
+  h2 a {
+    color: #ffffff;
+    font-weight: 400;
+  }
 }
 
 .app-lists {
-    margin-top: 30px;
+  margin-top: 30px;
 
-    .app-item {
-        background: #ffffff;
-        text-align: center;
-        margin-bottom: 20px;
+  .app-item {
+    background: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
 
-        .likes {
-            padding: 10px;
-            padding-bottom:0;
-            font-size:12px;
+    .likes {
+      padding: 10px;
+      padding-bottom: 0;
+      font-size: 12px;
 
-            //.btn-cx {
-            //    padding: 4px 10px;
-            //    font-size:12px;
-            //}
+      //.btn-cx {
+      //    padding: 4px 10px;
+      //    font-size:12px;
+      //}
 
-            .qrcode {
-                color: #333;
-                font-size:20px;
-                line-height: 1em;
-            }
-        }
-
-        .icon {
-            text-align: center;
-        }
-
-        .icon img {
-            width: 120px;
-            height:120px;
-            margin-top: 20px;
-            margin-bottom:20px;
-        }
-
-        .rating {
-            .line {
-                display: inline-block;
-                width: 14%;
-                height: 6px;
-                border-top: 1px solid #eee;
-                margin:0 6px;
-            }
-        }
-
-        .tags {
-            margin-bottom:15px;
-            margin-top:12px;
-
-            span {
-                display: inline-block;
-                padding: 0px 10px;
-                background: #EEEEEE;
-                font-size:12px;
-                font-weight:400;
-                margin:3px;
-            }
-        }
+      .qrcode {
+        color: #333;
+        font-size: 20px;
+        line-height: 1em;
+      }
     }
+
+    .icon {
+      text-align: center;
+    }
+
+    .icon img {
+      width: 120px;
+      height: 120px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .rating {
+      .line {
+        display: inline-block;
+        width: 14%;
+        height: 6px;
+        border-top: 1px solid #eee;
+        margin: 0 6px;
+      }
+    }
+
+    .tags {
+      margin-bottom: 15px;
+      margin-top: 12px;
+
+      span {
+        display: inline-block;
+        padding: 0px 10px;
+        background: #EEEEEE;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 3px;
+      }
+    }
+  }
 }
 
 .app-detail {
-  margin: 30px;
+  margin: 30px 0;
 
   .app-main-left {
     background: #ffffff;
@@ -149,27 +158,27 @@
     padding: 20px;
 
     .icon img {
-      width:120px;
+      width: 120px;
     }
 
     .info {
       margin-left: 30px;
 
       h1 {
-        font-size:1.4em;
+        font-size: 1.4em;
         color: #333;
-        margin:0;
-        margin-bottom:20px;
+        margin: 0;
+        margin-bottom: 20px;
       }
 
       .tags {
-        margin-top:10px;
+        margin-top: 10px;
       }
 
       .tags span {
         display: inline-block;
         padding: 3px 10px;
-        font-size:12px;
+        font-size: 12px;
         font-weight: 400;
         background: #EEEEEE;
         margin-right: 5px;
@@ -177,13 +186,13 @@
     }
 
     .rating {
-      font-size:12px;
+      font-size: 12px;
       width: 150px;
       text-align: right;
 
       .numbers {
         display: inline-block;
-        margin-right:3px;
+        margin-right: 3px;
         margin-left: 5px;
       }
     }
@@ -195,18 +204,18 @@
   .screen-shots {
     width: 695px;
     overflow-x: auto;
-    white-space:nowrap;
+    white-space: nowrap;
 
     .images-list {
       width: 100%;
 
       ul li {
         display: inline-block;
-        padding-bottom:10px;
+        padding-bottom: 10px;
 
         img {
           max-height: 320px;
-          padding:10px;
+          padding: 10px;
         }
       }
     }
@@ -217,7 +226,7 @@
     // 分数与星星
     .score-container {
       text-align: center;
-      padding-top:20px;
+      padding-top: 20px;
     }
 
     .score-container .score {
@@ -225,7 +234,7 @@
       font-size: 48px;
       font-weight: 100;
       line-height: 1.2em;
-      margin-bottom:10px;
+      margin-bottom: 10px;
     }
 
     .score-container-star-rating {
@@ -239,7 +248,7 @@
 
     // 评分条
     .rating-histogram {
-      width: 425px;
+      width: 200px;
     }
 
     .rating-histogram {
@@ -309,21 +318,21 @@
   .app-hot-list {
     ul {
       list-style: none;
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
     }
 
     ul li {
-      margin-bottom:15px;
+      margin-bottom: 15px;
 
       img {
         width: 60px;
         float: left;
-        margin-right:10px;
+        margin-right: 10px;
       }
 
       .title {
-        padding-top:5px;
+        padding-top: 5px;
       }
     }
   }
@@ -331,21 +340,21 @@
 
 .box {
   .box-header {
-    height:46px;
-    padding-top:10px;
+    height: 46px;
+    padding-top: 10px;
     //background: rgba(245, 248, 250, 0.6);
     background: #ffffff;
-    padding-left:20px;
-    border-bottom:1px solid #eee;
+    padding-left: 20px;
+    border-bottom: 1px solid #eee;
 
     h2 {
       display: inline-block;
-      font-weight:400;
-      font-size:14px;
+      font-weight: 400;
+      font-size: 14px;
       color: #333;
       line-height: 35px;
-      border-bottom:1px solid #444;
-      margin:0;
+      border-bottom: 1px solid #444;
+      margin: 0;
     }
   }
 

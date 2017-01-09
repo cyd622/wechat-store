@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 
 use App\Repositories\TagRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
+use Doctrine\DBAL\Schema\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Input;
+use BrowserDetect;
+
 
 class PagesController extends Controller
 {
@@ -20,6 +23,16 @@ class PagesController extends Controller
 
         $this->wxappRepository = App::make(WxappRepositoryEloquent::class);
         $this->wxappRepository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
+
+        $bwType = 'desktop';
+
+        if(BrowserDetect::isMobile()) {
+            $bwType = 'mobile';
+        } elseif(BrowserDetect::isTablet()) {
+            $bwType = 'tablet';
+        }
+
+        view()->share('browserType', $bwType);
     }
 
     public function index(Request $request)
@@ -29,7 +42,7 @@ class PagesController extends Controller
         return view('pages.index', compact('wxapps'));
     }
 
-    public function tag($tagId)
+    public function tagList($tagId)
     {
         $currentTag = $this->tagRepository->find($tagId);
         $wxapps = $currentTag->wxapps()->paginate(12);

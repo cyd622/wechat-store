@@ -36,7 +36,6 @@
 </head>
 <body>
 
-
 <div id="app">
 
     @include('widgets.browsoer_type_tag_start')

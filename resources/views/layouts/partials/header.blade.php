@@ -2,13 +2,13 @@
     <div class="container">
         <div class="row">
             <!-- .region-social-top-->
-            <div class="region region-social-top col-xs-12 col-sm-12 col-md-7 col-lg-7">
+            <div class="region region-social-top col-xs-12 col-sm-6">
 
-                <div id="block-block-46" class="block block-block hidden-xs hidden-sm">
+                <div id="block-block-46" class="block block-block hidden-xs">
                     <div class="inner"></div>
 
                     <div class="content">
-                        <span>发布小程序, 从WEWX开始, 让你的小程序人尽皆知!</span>
+                        <span>关注WEWX小程序, 每天体验最新最好玩的小程序!</span>
                     </div>
                 </div>
 
@@ -16,13 +16,13 @@
             <!-- END .region-social-top-->
 
             <!-- .region-contact-info-->
-            <div class="region region-contact-info col-xs-12 col-sm-8 col-md-5 col-lg-5">
+            <div class="region region-contact-info col-xs-12 col-sm-6">
 
                 <div id="block-tl-general-user-links-tl-general" class="block block-tl-general">
                     <div class="inner"></div>
 
                     <div class="content login-btns">
-                        <a href="https://jq.qq.com/?_wv=1027&k=43PHRrn" target="_blank">群: 538083326</a>
+                        <a href="https://jq.qq.com/?_wv=1027&k=43PHRrn" target="_blank">QQ群: 538083326</a>
                     </div>
 
                     <div class="clearfix"></div>

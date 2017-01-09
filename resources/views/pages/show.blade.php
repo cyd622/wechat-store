@@ -15,38 +15,15 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-8 col-lg-9">
+                <div class="col-md-8 col-lg-9 col-sm-12">
 
                     <div class="app-main-left">
-                        <div class="app-info">
-                            <div class="icon pull-left">
-                                <img src="{{ qiniu_cdn($currentWxapp->icon) }}" />
-                            </div>
 
-                            <div class="pull-right">
-                                <div class="rating">
-                                    <div class="starts">
-                                        {!! $currentWxapp->present()->genStarts() !!}
-                                    </div>
-
-                                    <div class="count">
-                                        <span class="numbers">444,21</span>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="info pull-left">
-                                <h1 class="title">{{ $currentWxapp->title }}</h1>
-                                <div class="author">{!! $currentWxapp->present()->genAuthor() !!}</div>
-
-                                <div class="tags">
-                                    {!! $currentWxapp->present()->genTags(5) !!}
-                                </div>
-                            </div>
-
-                            <div class="clearfix"></div>
-                        </div>
+                        @if($browserType == 'mobile')
+                            @include('pages.partials.app_info_mobile')
+                        @else
+                            @include('pages.partials.app_info_pc')
+                        @endif
 
                         <div class="box">
                             <div class="box-header">
@@ -90,7 +67,7 @@
 
                                     <div class="rating">
 
-                                        <div class="col-md-3 score-container">
+                                        <div class="col-sm-3 score-container">
                                             <div class="score">{{ $currentWxapp->rating }}</div>
                                             <div class="score-container-star-rating">
                                                 <div class="starts">
@@ -102,7 +79,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-9 rating-box">
+                                        <div class="col-sm-9 rating-box hidden-xs">
 
                                             <div class="rating-histogram">
                                                 <div class="rating-bar-container five">
@@ -152,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-lg-3">
+                <div class="col-md-4 col-lg-3 col-sm-12">
 
                     <div class="app-sidebar">
                         <div class="box">

@@ -14,7 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/tag/{tagId}', 'PagesController@tag')->name('tag');
+Route::get('/cate/{tagId}', 'PagesController@tagList')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 
 

@@ -27,6 +27,7 @@ elixir(mix => {
         .copy('node_modules/social-share.js/dist/fonts', 'public/build/fonts/iconfont')
         .copy('node_modules/sweetalert/dist/sweetalert.min.js', 'public/js/sweetalert.min.js')
         .copy('node_modules/social-share.js/dist/js/social-share.min.js', 'public/js/social-share.min.js')
+        .copy('node_modules/iscroll/build/iscroll.js', 'public/js/iscroll.js')
 
         .webpack('app.js')
 

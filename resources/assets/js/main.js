@@ -20,7 +20,7 @@
             $('[data-toggle="tooltip"]').tooltip()
         },
 
-        initPopup: function(){
+        initPopup: function () {
             // Popover with html
             $('.popover-with-html').popover({
                 html : true,
@@ -29,6 +29,7 @@
                 placement: 'auto top',
             });
         },
+
     }
 
     window.Wewx = Wewx
@@ -37,4 +38,5 @@
 $(document).ready(function()
 {
     Wewx.init();
+
 })
