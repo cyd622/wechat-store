@@ -16,7 +16,7 @@ class BrowserTypeComposer
 
     public function compose(View $view)
     {
-        $bwType = 'desktop';
+        $bwType = 'pc';
 
         if(BrowserDetect::isMobile()) {
             $bwType = 'mobile';

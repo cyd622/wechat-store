@@ -4,6 +4,8 @@
 <script src="{{ cdn('/js/social-share.min.js') }}"></script>
 <script src="{{ cdn(elixir('js/app.js')) }}"></script>
 
+@yield('scripts')
+
 <!-- 统计代码 -->
 <div style="display: none"><script src="{{ cdn(elixir('js/19083481.js')) }}"></script></div>
 

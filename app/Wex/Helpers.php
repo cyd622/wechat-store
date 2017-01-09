@@ -103,3 +103,17 @@ function is_request_from_api()
 {
     return $_SERVER['SERVER_NAME'] == env('API_DOMAIN');
 }
+
+function gen_uploadfiy($id)
+{
+    $html = <<<EOT
+    
+        <div id="queue"></div>
+		<input id="file_upload" name="file_upload" type="file" multiple="true">
+		<a style="position: relative; top: 8px;" href="javascript:$('#file_upload').uploadifive('upload')">Upload Files</a>
+
+EOT;
+
+    return $html;
+
+}

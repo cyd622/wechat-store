@@ -27,6 +27,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ cdn(elixir('css/app.css')) }}">
 
+    @yield('styles')
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([

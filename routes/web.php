@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
@@ -22,5 +23,6 @@ Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
 
 });
 
-
-Route::get('/home', 'HomeController@index');
+Route::group(['prefix' => 'user', 'namespace' => 'Home'], function() {
+    Route::resource('apps', 'AppsController');
+});
