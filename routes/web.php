@@ -17,7 +17,11 @@ Auth::routes();
 
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/tag/{tagId}', 'PagesController@tagList')->name('tag');
+
+// tag 重命名为 cate
+Route::get('/tag/{tagId}', function ($tagId) {
+    return redirect('/cate/'.$tagId, 301);
+});
 Route::get('/cate/{tagId}', 'PagesController@tagList')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 
