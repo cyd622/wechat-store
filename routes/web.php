@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/tag/{tagId}', function ($tagId) {
+    return redirect('/cate/'.$tagId, 301);
+});
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
