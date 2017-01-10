@@ -52,7 +52,7 @@ class DataProvider
      */
     public function getWxappUrl($wxapp)
     {
-        return $this->url->route('detail', $wxapp->id);
+        return $this->url->route('wxapp.show', $wxapp->id);
     }
 
     /**
