@@ -111,7 +111,7 @@ class Builder
     protected function addDynamicData($type, $config)
     {
         foreach ($this->getItems($type) as $item) {
-            $url     = $this->wo($item, $type);
+            $url     = $this->getItemUrl($item, $type);
             $lastMod = $item->{$config['lastMod']};
 
             $this->sitemap->add($url, $lastMod, $config['priority'], $config['freq']);

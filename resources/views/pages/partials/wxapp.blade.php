@@ -15,7 +15,7 @@
     </div>
 
     <div class="icon">
-        <a href="{{ route('detail', $wxapp->id) }}">
+        <a href="{{ route('wxapp.show', [$wxapp->id, $wxapp->name]) }}">
             <img src="{{ qiniu_cdn($wxapp->icon) }}">
         </a>
     </div>

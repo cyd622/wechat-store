@@ -1,5 +1,6 @@
 <?php namespace Wex\Sitemap;
 
+use App\Repositories\TagRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
 use App\Repositories\WxappTagRepositoryEloquent;
 use Illuminate\Routing\UrlGenerator;
@@ -27,7 +28,7 @@ class DataProvider
     public function __construct(
         UrlGenerator $url,
         WxappRepositoryEloquent $wxappRepository,
-        WxappTagRepositoryEloquent $tagRepository)
+        TagRepositoryEloquent $tagRepository)
     {
         $this->url    = $url;
         $this->wxappRepository = $wxappRepository;
@@ -41,7 +42,7 @@ class DataProvider
      */
     public function getWxapps()
     {
-        return $this->wxappRepository->orderBy('created_at', 'desc')->get();
+        return $this->wxappRepository->orderBy('created_at', 'desc')->all();
     }
 
     /**
@@ -61,7 +62,7 @@ class DataProvider
      */
     public function getTags()
     {
-        return $this->tagRepository->orderBy('created_at', 'desc')->get();
+        return $this->tagRepository->orderBy('created_at', 'desc')->all();
     }
 
     public function getTagUrl($tag)

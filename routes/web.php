@@ -23,13 +23,12 @@ Auth::routes();
  * pages
  */
 Route::get('/', 'PagesController@index')->name('index');
-
-// tag 重命名为 cate
 Route::get('/tag/{tagId}', function ($tagId) {
-    return redirect('/cate/'.$tagId, 301);
+    return redirect('/cate/'.$tagId, 301); // tag 重命名为 cate
 });
 Route::get('/cate/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
+Route::get('/xiaochengxu/{id}/n/{name}', 'PagesController@show')->name('wxapp.show');
 Route::get('/search', 'PagesController@search')->name('search');
 
 
