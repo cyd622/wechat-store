@@ -28,7 +28,7 @@ Route::get('/tag/{tagId}', function ($tagId) {
 });
 Route::get('/cate/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
-Route::get('/xiaochengxu/{id}/n/{name}', 'PagesController@show')->name('wxapp.show');
+Route::get('/xiaochengxu/{id}/{name}', 'PagesController@show')->name('wxapp.show');
 Route::get('/search', 'PagesController@search')->name('search');
 
 
