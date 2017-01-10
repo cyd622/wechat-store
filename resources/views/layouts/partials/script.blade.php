@@ -24,3 +24,12 @@
         s.parentNode.insertBefore(bp, s);
     })();
 </script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?69cd8117fa4ac3c4f4bdb93cf6aa55be";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
