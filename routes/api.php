@@ -21,6 +21,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     });
 
     Route::resource('wxapp', 'WxappController');
-    Route::resource('tag', 'TagController');
 
 });

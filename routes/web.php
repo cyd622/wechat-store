@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/tag/{tagId}', function ($tagId) {
-    return redirect('/cate/'.$tagId, 301);
-});
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
+
 Route::get('/', 'PagesController@index')->name('index');
+Route::get('/tag/{tagId}', 'PagesController@tagList')->name('tag');
 Route::get('/cate/{tagId}', 'PagesController@tagList')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 
