@@ -180,6 +180,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Intervention\Image\ImageServiceProvider::class,
+
         /*
          * Develop Plugin
          */
@@ -200,6 +202,7 @@ return [
         // oauth
         Laravel\Passport\PassportServiceProvider::class,
         hisorange\BrowserDetect\Provider\BrowserDetectService::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider
 
 
     ],
@@ -251,6 +254,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'BrowserDetect' => hisorange\BrowserDetect\Facade\Parser::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 
 ];

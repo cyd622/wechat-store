@@ -104,14 +104,14 @@ function is_request_from_api()
     return $_SERVER['SERVER_NAME'] == env('API_DOMAIN');
 }
 
-function gen_uploadfiy($id)
+function gen_uploadfiy($id, $multiple = 'true')
 {
     $html = <<<EOT
-    
-        <div id="queue"></div>
-		<input id="file_upload" name="file_upload" type="file" multiple="true">
-		<a style="position: relative; top: 8px;" href="javascript:$('#file_upload').uploadifive('upload')">Upload Files</a>
-
+        <div class="{$id}-wrapper">
+            <div id="queue"></div>
+            <input id="{$id}" name="files" type="file" multiple="{$multiple}">
+            <a style="position: relative; top: 8px; display: none" href="javascript:$('#file_upload').uploadifive('upload')"></a>
+        </div>
 EOT;
 
     return $html;

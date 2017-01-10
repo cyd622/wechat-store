@@ -33,14 +33,6 @@ Route::get('/search', 'PagesController@search')->name('search');
 
 
 /**
- * sitemaps
- */
-Route::get('/sitemap', 'SitemapController@sitemap');
-Route::get('/sitemap.xml', 'SitemapController@sitemap');
-Route::get('/sitemap', 'SitemapController@sitemap');
-
-
-/**
  * talk
  */
 Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
@@ -54,3 +46,18 @@ Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
 Route::group(['prefix' => 'user', 'namespace' => 'Home'], function() {
     Route::resource('apps', 'AppsController');
 });
+
+
+/**
+ * sitemaps
+ */
+Route::get('/sitemap', 'SitemapController@sitemap');
+Route::get('/sitemap.xml', 'SitemapController@sitemap');
+Route::get('/sitemap', 'SitemapController@sitemap');
+
+
+/**
+ * upload
+ */
+Route::POST('/upload', 'UploadController@upload')->name('upload');
+Route::POST('/upload/check', 'UploadController@check')->name('upload.check');

@@ -9,3 +9,4 @@ Homestead.yaml
 composer.lock
 storage/*
 .DS_Store
+public/uploads/

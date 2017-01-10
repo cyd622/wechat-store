@@ -16,26 +16,27 @@
                         <div class="box-content">
 
                             <form class="form" role="form">
+                                {{ csrf_field() }}
                                 <div class="form-group">
                                     <label class="control-label">名称</label>
-
                                     <input type="text" class="form-control" placeholder="请输入产品名称">
-
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">小程序二维码</label>
 
-                                    <input type="password" class="form-control" id="inputPassword3"
-                                           placeholder="Password">
+                                    <div class="upload-box">
+                                        {!! gen_uploadfiy('qrcode-upload', 'false') !!}
+                                    </div>
 
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="control-label">ICON</label>
+                                    <label for="inputPassword3" class="control-label">小程序二ICON</label>
 
-                                    <input type="password" class="form-control" id="inputPassword3"
-                                           placeholder="Password">
+                                    <div class="upload-box">
+                                        {!! gen_uploadfiy('icon-upload', 'false') !!}
+                                    </div>
 
                                 </div>
 
@@ -59,20 +60,18 @@
                                 <div class="form-group">
                                     <label class="control-label">截图</label>
 
-                                    <input type="text" class="form-control" placeholder="请输入产品名称">
+                                    <div class="upload-box">
+                                        {!! gen_uploadfiy('screenshots-upload') !!}
+                                    </div>
 
                                 </div>
 
 
-                                <div class="form-group">
-
-                                    <button type="submit" class="btn btn-danger">保存并提交</button>
+                                <div class="form-group mt-20">
+                                    <button type="submit" class="btn btn-success">保存并提交</button>
                                     <button type="submit" class="btn btn-default">取消</button>
-
                                 </div>
                             </form>
-
-                            {!! gen_uploadfiy(1) !!}
                         </div>
                     </div>
 
@@ -90,17 +89,29 @@
     <script type="text/javascript">
         <?php $timestamp = time();?>
         $(function() {
-            $('#file_upload').uploadifive({
-                'auto'             : false,
-                'checkScript'      : 'check-exists.php',
-                'formData'         : {
-                    'timestamp' : '<?php echo $timestamp;?>',
-                    'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
-                },
-                'queueID'          : 'queue',
-                'uploadScript'     : 'uploadifive.php',
-                'onUploadComplete' : function(file, data) { console.log(data); }
-            });
+            var ids = [
+                'qrcode',
+                'icon',
+                'screenshots'
+            ];
+
+            $.each(ids, function (index, el) {
+                var upBase = {
+                    'auto'              : true,
+                    'buttonText'        : '<i class="fa fa-plus" aria-hidden="true"></i>',
+                    'checkScript'       : '{{ route('upload.check') }}',
+                    'formData'          : {
+                        'timestamp'     : '<?php echo $timestamp;?>',
+                        '_token'         : '{{ csrf_token() }}',
+                        'type'          : el
+                    },
+                    'queueID'           : 'queue',
+                    'uploadScript'      : '{{ route('upload') }}',
+                    'onUploadComplete'  : function(file, data) { console.log(data); }
+                }
+
+                $('#' + el + '-upload').uploadifive(upBase);
+            })
         });
     </script>
 
