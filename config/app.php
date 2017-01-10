@@ -201,8 +201,7 @@ return [
 
         // oauth
         Laravel\Passport\PassportServiceProvider::class,
-        hisorange\BrowserDetect\Provider\BrowserDetectService::class,
-        zgldh\QiniuStorage\QiniuFilesystemServiceProvider
+        hisorange\BrowserDetect\Provider\BrowserDetectService::class
 
 
     ],
