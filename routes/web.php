@@ -12,24 +12,46 @@
 */
 
 
+/**
+ * auth
+ */
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
 
+/**
+ * pages
+ */
 Route::get('/', 'PagesController@index')->name('index');
 
 // tag 重命名为 cate
 Route::get('/tag/{tagId}', function ($tagId) {
     return redirect('/cate/'.$tagId, 301);
 });
-Route::get('/cate/{tagId}', 'PagesController@tagList')->name('tag');
+Route::get('/cate/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
+Route::get('/search', 'PagesController@search')->name('search');
 
 
+/**
+ * sitemaps
+ */
+Route::get('/sitemap', 'SitemapController@sitemap');
+Route::get('/sitemap.xml', 'SitemapController@sitemap');
+Route::get('/sitemap', 'SitemapController@sitemap');
+
+
+/**
+ * talk
+ */
 Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
 
 });
 
+
+/**
+ * home
+ */
 Route::group(['prefix' => 'user', 'namespace' => 'Home'], function() {
     Route::resource('apps', 'AppsController');
 });

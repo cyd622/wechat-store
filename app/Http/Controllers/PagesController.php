@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Repositories\TagRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
-use Doctrine\DBAL\Schema\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Input;
 use BrowserDetect;
 
 
@@ -42,7 +40,7 @@ class PagesController extends Controller
         return view('pages.index', compact('wxapps'));
     }
 
-    public function tagList($tagId)
+    public function tag($tagId)
     {
         $currentTag = $this->tagRepository->find($tagId);
         $wxapps = $currentTag->wxapps()->paginate(12);
@@ -57,7 +55,16 @@ class PagesController extends Controller
         if(!$currentWxapp)
             abort(404);
 
-
         return view('pages.show', compact('currentWxapp'));
+    }
+
+    public function wiki()
+    {
+
+    }
+
+    public function search(Request $request)
+    {
+
     }
 }

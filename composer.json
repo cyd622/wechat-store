@@ -15,7 +15,8 @@
         "laravel/passport": "^1.0",
         "caouecs/laravel-lang": "~3.0",
         "predis/predis": "^1.1",
-        "hisorange/browser-detect": "2.*"
+        "hisorange/browser-detect": "2.*",
+        "roumen/sitemap": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

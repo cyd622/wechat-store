@@ -187,6 +187,10 @@ return [
         Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+        // rss & sitemap
+        Roumen\Sitemap\SitemapServiceProvider::class,
+
+
         // Repository
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
 

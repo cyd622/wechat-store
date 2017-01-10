@@ -8,3 +8,4 @@ Homestead.yaml
 .idea
 composer.lock
 storage/*
+.DS_Store
