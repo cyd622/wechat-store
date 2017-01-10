@@ -35,7 +35,6 @@ class PagesController extends Controller
 
     public function index(Request $request)
     {
-
         $wxapps = $this->wxappRepository->getFromeCache();
         return view('pages.index', compact('wxapps'));
     }
@@ -43,7 +42,12 @@ class PagesController extends Controller
     public function tag($tagId)
     {
         $currentTag = $this->tagRepository->find($tagId);
-        $wxapps = $currentTag->wxapps()->paginate(12);
+
+        if(BrowserDetect::isMobile()) {
+            $wxapps = $currentTag->wxapps()->simplePaginate(12);
+        } else {
+            $wxapps = $currentTag->wxapps()->paginate(12);
+        }
 
         return view('pages.index', compact('wxapps', 'currentTag'));
     }

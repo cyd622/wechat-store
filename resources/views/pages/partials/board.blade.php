@@ -7,7 +7,7 @@
     </div>
 
     <div class="md-mainimg">
-        <img src="{{ cdn('images/bg_1.jpg') }}" />
+        <img src="{{ cdn('images/bg_2.jpg') }}" />
     </div>
 
     <div class="clearfix"></div>

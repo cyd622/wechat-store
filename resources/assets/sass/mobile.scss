@@ -7,6 +7,17 @@
       }
     }
 
+    #section-header {
+      .navbar-nav > li > a {
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+
+      .logo {
+        margin-top: 2px;
+      }
+    }
+
     .box {
       .box-header {
         padding-left:10px;
@@ -14,6 +25,21 @@
 
       .box-content {
         padding: 20px 10px;
+      }
+    }
+
+    .app-lists {
+      .row {
+        margin-right: -16px;
+      }
+      .col-xs-6 {
+        padding:0;
+      }
+
+      .app-item {
+        margin-bottom: 0px;
+        border-bottom:1px solid #eee;
+        border-right:1px solid #eee;
       }
     }
 

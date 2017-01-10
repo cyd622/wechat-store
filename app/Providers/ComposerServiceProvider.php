@@ -17,10 +17,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View::composer('widgets.tags', 'App\Http\ViewComposers\TagsComposer');
         View::composer('widgets.auth_bg', 'App\Http\ViewComposers\AuthBgComposer');
-        View::composer([
-            'widgets.browsoer_type_tag_start',
-            'layouts.partials.footer'
-        ], 'App\Http\ViewComposers\BrowserTypeComposer');
+        View::composer('*', 'App\Http\ViewComposers\BrowserTypeComposer');
 
         view()->composer('*', function ($view) {
             $view->with('currentUser', \Auth::user());

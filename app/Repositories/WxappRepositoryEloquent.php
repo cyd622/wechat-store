@@ -7,6 +7,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\WxappRepository;
 use App\Entities\Wxapp;
 use App\Validators\WxappValidator;
+use BrowserDetect;
 
 /**
  * Class WxappRepositoryEloquent
@@ -45,7 +46,11 @@ class WxappRepositoryEloquent extends BaseRepository implements WxappRepository
 
     public function getFromeCache()
     {
-        return $this->model->orderBy('id', 'desc')->paginate(12);
+        if(BrowserDetect::isMobile()) {
+            return $this->model->orderBy('id', 'desc')->simplePaginate(12);
+        } else {
+            return $this->model->orderBy('id', 'desc')->paginate(12);
+        }
     }
 
 }

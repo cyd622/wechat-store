@@ -24,7 +24,7 @@
         {{ $wxapp->title }}
     </div>
 
-    <div class="rating starts">
+    <div class="rating starts hidden-xs">
 
         <span class="line"></span>
         {!! $wxapp->present()->genStarts() !!}

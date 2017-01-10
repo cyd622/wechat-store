@@ -37,7 +37,7 @@
 
 <div id="app">
 
-    <div class="">
+    @include('widgets.browsoer_type_tag_start')
         <div class="user-auth">
 
             <div id="section-header" class="sticky-wrapper">

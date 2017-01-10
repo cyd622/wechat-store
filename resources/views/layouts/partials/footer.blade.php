@@ -29,8 +29,11 @@
                         <div class="pull-left">
                             <img src="{{ cdn('images/logo.png') }}" class="footer-logo gray-image">
 
-                            <p>第一时间体验最新最好的微信小程序。</p>
-                            <p>鄂ICP备12006553号-5</p>
+                            <div class="copyright-info mt-20">
+                                <p>第一时间体验最新最好的微信小程序。</p>
+                                <p>版权所有 © WxStore | wewx.cn 2016 - 2017</p>
+                                <p>鄂ICP备12006553号-5</p>
+                            </div>
                         </div>
 
                         <div class="pull-right">
