@@ -43,8 +43,9 @@ Route::group(['prefix' => 'talk', 'namespace' => 'Talk'], function() {
 /**
  * home
  */
-Route::group(['prefix' => 'user', 'namespace' => 'Home'], function() {
+Route::group(['prefix' => 'user', 'namespace' => 'Home', 'middle' => 'auth'], function() {
     Route::resource('apps', 'AppsController');
+    Route::resource('user', 'UserController');
 });
 
 

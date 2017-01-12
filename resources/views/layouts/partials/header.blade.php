@@ -69,8 +69,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎，{{ $currentUser->name }} <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        {{--<li class="divider"></li>--}}
-                                        <li><a href="{{ URL::route('logout') }}">退出</a></li>
+
+                                        <li><a href="{{ URL::route('user.index') }}"><i class="fa fa-user text-md"></i> 个人中心</a></li>
+
+                                        <li class="divider"></li>
+                                        <li><a href="{{ URL::route('logout') }}"><i class="fa fa-sign-out text-md"></i> 退出</a></li>
                                     </ul>
                                 </li>
 

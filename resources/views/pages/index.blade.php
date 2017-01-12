@@ -1,5 +1,15 @@
 @extends('layouts.pages')
 
+
+@section('title')
+    @if(isset($currentTag))
+        {{$currentTag->title}}微信小程序大全 @parent
+    @else
+        @parent
+    @endif
+@stop
+
+
 @section('content')
 
     @include('widgets.tags')
@@ -23,11 +33,7 @@
                 @else
 
                     <div class="col-xs-12">
-                        <div class="nothing">
-                            <h3>%>_<%</h3>
-                            <p>服务器君什么都没找到</p>
-                            <p><a href="{{ route('index') }}">回首页</a></p>
-                        </div>
+                        {!! gen_nodata() !!}
                     </div>
 
                 @endif
@@ -46,4 +52,7 @@
 
         <div class="clearfix"></div>
     </div>
+
+    @include('widgets.friendlinks')
+
 @stop

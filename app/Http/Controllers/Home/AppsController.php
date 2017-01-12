@@ -17,20 +17,16 @@ use Wex\Listeners\CreatorListener;
 
 class AppsController extends Controller implements CreatorListener
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
 
-        return view('users.apps.index');
+        return view('home.apps.index');
     }
 
     public function create()
     {
-        return view('users.apps.create');
+        return view('home.apps.create');
     }
 
     public function store(WxappCreateRequest $request)

@@ -1,0 +1,23 @@
+.home {
+  .sidebar {
+    li {
+      padding:15px;
+      border-bottom:1px solid #eee;
+    }
+  }
+
+  .home-page-header {
+    height:200px;
+    text-align: center;
+    position: relative;
+    padding-top:70px;
+
+    p.page-title {
+      font-size:18px;
+    }
+  }
+
+  .main-content {
+    min-height: 500px;
+  }
+}

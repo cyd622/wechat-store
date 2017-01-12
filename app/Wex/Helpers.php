@@ -121,3 +121,22 @@ EOT;
     return $html;
 
 }
+
+function gen_nodata($showIndexLink = true)
+{
+    $html = <<<EOT
+    <div class="nothing">
+        <h3>%>_<%</h3>
+        <p>服务器君什么都没找到</p>
+EOT;
+
+    if($showIndexLink) {
+        $html .= '<p><a href="{{ route(\'index\') }}">回首页</a></p>';
+    }
+
+    $html .= '
+        </div>
+    ';
+
+    return $html;
+}
