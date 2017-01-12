@@ -14,6 +14,11 @@ html, body {
 ul {
   margin:0;
   padding:0;
+  list-style: none;
+}
+
+a {
+  color: #3f4952;
 }
 
 body[class*=preset-white] #section-header {

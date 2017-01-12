@@ -24,6 +24,7 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer('widgets.wxapp_newest', 'App\Http\ViewComposers\NewestWxappsComposer');
         View::composer('widgets.wxapp_hotest', 'App\Http\ViewComposers\HotestWxappsComposer');
         View::composer('*', 'App\Http\ViewComposers\BrowserTypeComposer');
+        View::composer('widgets.friendlinks', 'App\Http\ViewComposers\FriendLinkComposer');
 
         view()->composer('*', function ($view) {
             $view->with('currentUser', \Auth::user());

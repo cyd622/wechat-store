@@ -37,10 +37,6 @@
             $(document).on("click", ".tags li", function () {
                 that = $(this)
 
-                if($(".tags li.active").length > 4) {
-                    return false;
-                }
-
                 var id = that.attr("data-id")
                 console.log('tag: ' + id)
 
@@ -48,6 +44,11 @@
                     $(".tags .selected").find("input.tag-" + id).remove()
                     that.removeClass('active')
                 } else {
+
+                    if($(".tags li.active").length > 4) {
+                        return false;
+                    }
+
                     that.addClass('active')
                     var html = '<input type="hidden" class="tag-' + id + '" name="tags[]" value="' + id + '" />'
                     console.log(html)
