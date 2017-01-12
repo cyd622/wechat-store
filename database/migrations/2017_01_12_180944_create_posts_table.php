@@ -29,6 +29,10 @@ class CreatePostsTable extends Migration
             $table->enum('comment_status', [1, 0])->default(1)->index();
             $table->integer('comment_count')->default(0);
 
+            $table->string('source')->default('');
+            $table->string('source_url', 512)->default('');
+            $table->integer('source_id')->default(0);
+
             $table->timestamp();
             $table->softDeletes();
         });
