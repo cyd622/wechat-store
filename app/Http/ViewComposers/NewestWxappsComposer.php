@@ -31,7 +31,6 @@ class NewestWxappsComposer
             ->paginate(5);
 
         $view->with('wxapps', $wxapp);
-
     }
 
 }

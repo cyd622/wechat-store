@@ -157,17 +157,6 @@
                             </div>
                         </div>
 
-
-                        <div class="box">
-                            <div class="box-header">
-                                <h2>最新应用</h2>
-                            </div>
-
-                            <div class="box-content">
-                                @include('widgets.wxapp_newest')
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>

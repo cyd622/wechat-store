@@ -26,7 +26,7 @@ class HotestWxappsComposer
     public function compose(View $view)
     {
         $wxapps = $this->wxappRepository->with('tags')
-            ->paginate(5);
+            ->paginate(10);
 
         $view->with('wxapps', $wxapps);
     }
