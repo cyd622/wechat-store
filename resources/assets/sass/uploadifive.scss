@@ -10,12 +10,20 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
   width: 100px !important;
   height: 100px !important;
   line-height: 100px !important;
-  font-size: 20px !important;
+  font-size: 24px !important;
+
+  float: left;
+  margin-right: 15px;
+
+  input:hover {
+    cursor: pointer;
+  }
 }
 
 .uploadifive-button:hover {
   background-color: #f2f2f2;
   background-position: center bottom;
+  cursor: pointer;
 }
 
 .uploadifive-queue-item {
@@ -52,6 +60,9 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
 }
 
 .upload-box {
+  .upload-image {
+    float: left;
+  }
   #queue {
     margin-bottom: 10px;
     background: #f8f8f8;
@@ -65,11 +76,52 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
     display: none;
   }
 
+  .image-item {
+    display: inline-block;
+    margin-right:15px;
+  }
+
   .screenshots-upload-wrapper {
     .uploadifive-button {
-      width: 110px !important;
-      height: 200px !important;
-      line-height: 200px !important;
+      width: 140px !important;
+      height: 250px !important;
+      line-height: 250px !important;
+    }
+
+    .upload-image {
+      height:250px;
+
+      .image-item {
+        margin-right:15px;
+        position: relative;
+
+        .delete-image-btn {
+          position: absolute;
+          font-size:24px;
+          right: -10px;
+          background: #ffffff;
+          top:-10px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+
+      img {
+        height:250px;
+        width:140px;
+      }
+    }
+  }
+
+  .qrcode-upload-wrapper, .icon-upload-wrapper {
+    .upload-image {
+      height:120px;
+
+      img {
+        height:120px;
+        width:120px;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ class WxappCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return \Auth::check();
     }
 
     /**
@@ -25,12 +25,21 @@ class WxappCreateRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'user_id' => 'required',
             'description' => 'required',
             'qrcode' => 'required',
             'icon' => 'required',
-            'source' => 'required',
-            'source_id' => 'required',
+            'screenshots' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => '请填写小程序标题',
+            'description.required'  => '请填写小程序介绍',
+            'qrcode.required'  => '请上传小程序二维码',
+            'icon.required'  => '请上传小程序ICON',
+            'screenshots.required'  => '请上传小程序截图',
         ];
     }
 }

@@ -33,7 +33,7 @@ function get_user_static_domain()
 
 function lang($text, $parameters = [])
 {
-    return str_replace('wex.', '', trans('wex.'.$text, $parameters));
+    return str_replace('wewx.', '', trans('wewx.'.$text, $parameters));
 }
 
 function admin_link($title, $path, $id = '')
@@ -107,10 +107,14 @@ function is_request_from_api()
 function gen_uploadfiy($id, $multiple = 'true')
 {
     $html = <<<EOT
-        <div class="{$id}-wrapper">
-            <div id="queue"></div>
-            <input id="{$id}" name="files" type="file" multiple="{$multiple}">
+        <div class="{$id}-upload-wrapper">
+            <div id="{$id}-queue"></div>
+            <input id="{$id}-upload" name="files" type="file" multiple="{$multiple}">
             <a style="position: relative; top: 8px; display: none" href="javascript:$('#file_upload').uploadifive('upload')"></a>
+            
+            <div class="upload-image"></div> 
+            
+            <div class="clearfix"></div>
         </div>
 EOT;
 

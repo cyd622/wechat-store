@@ -18,11 +18,16 @@ class UploadController extends Controller
 
         if ($file = $request->file('Filedata')) {
             try {
-                $upload_status = app('Wex\Handler\ImageUploadHandler')->uploadImage($file);
+                $upload_status = app('Wex\Handlers\ImageUploadHandler')->uploadImage($file, $request->get('type'));
             } catch (ImageUploadException $exception) {
                 return ['error' => $exception->getMessage()];
             }
-            $data['filename'] = $upload_status['filename'];
+
+            $data = [
+                'fullpath' =>$upload_status['fullpath'],
+                'filename' =>$upload_status['filename'],
+                'type' => $request->get('type')
+            ];
         } else {
             $data['error'] = 'Error while uploading file';
         }

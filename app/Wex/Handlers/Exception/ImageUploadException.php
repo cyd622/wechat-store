@@ -1,6 +1,6 @@
 <?php
 
-namespace Wex\Handler\Exception;
+namespace Wex\Handlers\Exception;
 
 class ImageUploadException extends \Exception
 {

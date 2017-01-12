@@ -1,12 +1,14 @@
 <?php
 
-namespace Wex\Handler;
+namespace Wex\Handlers;
 
 use App\Entities\User;
 use Image;
 use Auth;
-use Wex\Handler\Exception\ImageUploadException;
+use Log;
+use Wex\Handlers\Exception\ImageUploadException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use zgldh\QiniuStorage\QiniuStorage;
 
 
 class ImageUploadHandler
@@ -33,13 +35,16 @@ class ImageUploadHandler
         return ['filename' => $avatar_name];
     }
 
-    public function uploadImage($file)
+    public function uploadImage($file, $type)
     {
         $this->file = $file;
         $this->checkAllowedExtensionsOrFail();
 
-        $local_image = $this->saveImageToLocal('topic', 1440);
-        return ['filename' => get_user_static_domain() . $local_image];
+        $qiniuImage = $this->saveImageToQiniu($type, 1440);
+        return [
+            'filename' => $qiniuImage,
+            'fullpath' => qiniu_cdn($qiniuImage)
+        ];
     }
 
     protected function checkAllowedExtensionsOrFail()
@@ -72,8 +77,15 @@ class ImageUploadHandler
         return $folderName .'/'. $safeName;
     }
 
-    protected function saveImageToQiniu($type, $resize, $filename = '')
+    protected function saveImageToQiniu($type, $resize = '', $filename = '')
     {
+        $destinationPath =  $type . '/';
+        $extension = $this->file->getClientOriginalExtension() ?: 'png';
+        $safeName  = $filename ? :str_random(10) . '.' . $extension;
 
+        $disk = QiniuStorage::disk('qiniu');
+        $disk->put($destinationPath.$safeName, file_get_contents($this->file->getPathname()));
+
+        return $destinationPath.$safeName;
     }
 }

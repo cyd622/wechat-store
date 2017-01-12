@@ -14,6 +14,7 @@
 
             self.initToolTips()
             self.initPopup()
+            self.initTagsSelector()
         },
 
         initToolTips: function () {
@@ -30,6 +31,31 @@
             });
         },
 
+        initTagsSelector: function () {
+            var self = this
+
+            $(document).on("click", ".tags li", function () {
+                that = $(this)
+
+                if($(".tags li.active").length > 4) {
+                    return false;
+                }
+
+                var id = that.attr("data-id")
+                console.log('tag: ' + id)
+
+                if(that.hasClass('active')) {
+                    $(".tags .selected").find("input.tag-" + id).remove()
+                    that.removeClass('active')
+                } else {
+                    that.addClass('active')
+                    var html = '<input type="hidden" class="tag-' + id + '" name="tags[]" value="' + id + '" />'
+                    console.log(html)
+                    $(".tags .selected").append(html)
+                }
+            })
+        }
+
     }
 
     window.Wewx = Wewx
@@ -38,5 +64,4 @@
 $(document).ready(function()
 {
     Wewx.init();
-
 })

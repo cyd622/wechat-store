@@ -116,3 +116,26 @@
     }
   }
 }
+
+
+// tag
+.tags {
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 2px 10px;
+      margin-right: 5px;
+      border: 1px solid #eee;
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-size:12px;
+    }
+
+    li.active {
+      color: #E82201;
+      border-color: #E82201;
+    }
+  }
+}

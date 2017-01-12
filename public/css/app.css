@@ -11377,6 +11377,25 @@ ul.menu {
   font-weight: normal;
 }
 
+.control-label {
+  color: #333;
+}
+
+.control-label small {
+  padding-left: 5px;
+  color: #7D8994;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #98cbe8;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 203, 232, 0.6);
+}
+
 .starts .start {
   padding-left: 2px;
   padding-right: 2px;
@@ -11474,6 +11493,25 @@ ul.menu {
 
 #footer .copyright-info p {
   margin: 0;
+}
+
+.tags ul {
+  list-style: none;
+}
+
+.tags ul li {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-right: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tags ul li.active {
+  color: #E82201;
+  border-color: #E82201;
 }
 
 .wxapp-nav {
@@ -12188,12 +12226,19 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
   width: 100px !important;
   height: 100px !important;
   line-height: 100px !important;
-  font-size: 20px !important;
+  font-size: 24px !important;
+  float: left;
+  margin-right: 15px;
+}
+
+.uploadifive-button input:hover {
+  cursor: pointer;
 }
 
 .uploadifive-button:hover {
   background-color: #f2f2f2;
   background-position: center bottom;
+  cursor: pointer;
 }
 
 .uploadifive-queue-item {
@@ -12227,6 +12272,10 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
   width: 0;
 }
 
+.upload-box .upload-image {
+  float: left;
+}
+
 .upload-box #queue {
   margin-bottom: 10px;
   background: #f8f8f8;
@@ -12240,10 +12289,47 @@ Copyright (c) 2012 Reactive Apps, Ronnie Garcia
   display: none;
 }
 
+.upload-box .image-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
 .upload-box .screenshots-upload-wrapper .uploadifive-button {
-  width: 110px !important;
-  height: 200px !important;
-  line-height: 200px !important;
+  width: 140px !important;
+  height: 250px !important;
+  line-height: 250px !important;
+}
+
+.upload-box .screenshots-upload-wrapper .upload-image {
+  height: 250px;
+}
+
+.upload-box .screenshots-upload-wrapper .upload-image .image-item {
+  margin-right: 15px;
+  position: relative;
+}
+
+.upload-box .screenshots-upload-wrapper .upload-image .image-item .delete-image-btn {
+  position: absolute;
+  font-size: 24px;
+  right: -10px;
+  background: #ffffff;
+  top: -10px;
+  border-radius: 50%;
+}
+
+.upload-box .screenshots-upload-wrapper .upload-image img {
+  height: 250px;
+  width: 140px;
+}
+
+.upload-box .qrcode-upload-wrapper .upload-image, .upload-box .icon-upload-wrapper .upload-image {
+  height: 120px;
+}
+
+.upload-box .qrcode-upload-wrapper .upload-image img, .upload-box .icon-upload-wrapper .upload-image img {
+  height: 120px;
+  width: 120px;
 }
 
 /*# sourceMappingURL=app.css.map */

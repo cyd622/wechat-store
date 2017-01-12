@@ -64,7 +64,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             @if(Auth::user())
 
-                                <li><a href="{{ route('apps.index') }}">提交小程序</a></li>
+                                <li><a href="{{ route('apps.create') }}">提交小程序</a></li>
 
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎，{{ $currentUser->name }} <span class="caret"></span></a>

@@ -204,6 +204,8 @@ return [
         hisorange\BrowserDetect\Provider\BrowserDetectService::class,
 
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        Krucas\Notification\NotificationServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
 
     ],
@@ -255,7 +257,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'BrowserDetect' => hisorange\BrowserDetect\Facade\Parser::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Notification' => Krucas\Notification\Facades\Notification::class,
     ],
 
 ];

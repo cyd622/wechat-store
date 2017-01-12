@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class WxappUpdateRequest extends FormRequest
+class WxappApiCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class WxappUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return \Auth::check();
     }
 
     /**
@@ -24,7 +24,13 @@ class WxappUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'user_id' => 'required',
+            'description' => 'required',
+            'qrcode' => 'required',
+            'icon' => 'required',
+            'source' => 'required',
+            'source_id' => 'required',
         ];
     }
 }
