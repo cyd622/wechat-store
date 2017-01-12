@@ -21,6 +21,8 @@ class ComposerServiceProvider extends ServiceProvider
         ], 'App\Http\ViewComposers\TagsComposer');
 
         View::composer('widgets.auth_bg', 'App\Http\ViewComposers\AuthBgComposer');
+        View::composer('widgets.wxapp_newest', 'App\Http\ViewComposers\NewestWxappsComposer');
+        View::composer('widgets.wxapp_hotest', 'App\Http\ViewComposers\HotestWxappsComposer');
         View::composer('*', 'App\Http\ViewComposers\BrowserTypeComposer');
 
         view()->composer('*', function ($view) {

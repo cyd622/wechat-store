@@ -149,87 +149,22 @@
 
                         <div class="box">
                             <div class="box-header">
-                                <h2>相关推荐</h2>
+                                <h2>热门推荐</h2>
                             </div>
 
                             <div class="box-content">
+                                @include('widgets.wxapp_hotest')
+                            </div>
+                        </div>
 
-                                <div class="app-hot-list">
-                                    <ul>
-                                        <li>
-                                            <img src="http://media.ifanrusercontent.com/media/user_files/trochili/0f/05/0f055784ece7ed696f66db495d9be7438417fc50-0917692111b48eec77f1de10abf09c4e4f269260.png"
-                                                 alt="">
-                                            <div class="title">扇贝小字典</div>
 
-                                            <div class="rating">
-                                                <span class="line"></span>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
-                                                <span class="line"></span>
-                                            </div>
+                        <div class="box">
+                            <div class="box-header">
+                                <h2>最新应用</h2>
+                            </div>
 
-                                            <div class="clearfix"></div>
-                                        </li>
-
-                                        <li>
-                                            <img src="http://media.ifanrusercontent.com/media/user_files/trochili/0a/86/0a86713a99624d29d62890b40688eec48161cdd8-c25c069323e7a26f002d21496dd1def73284b004.png"
-                                                 alt="">
-                                            <div class="title">农查查</div>
-
-                                            <div class="rating">
-                                                <span class="line"></span>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
-                                                <span class="line"></span>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-                                        </li>
-
-                                        <li>
-                                            <img src="http://media.ifanrusercontent.com/media/user_files/trochili/0a/86/0a86713a99624d29d62890b40688eec48161cdd8-c25c069323e7a26f002d21496dd1def73284b004.png"
-                                                 alt="">
-                                            <div class="title">农查查</div>
-
-                                            <div class="rating">
-                                                <span class="line"></span>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
-                                                <span class="line"></span>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-                                        </li>
-
-                                        <li>
-                                            <img src="http://media.ifanrusercontent.com/media/user_files/trochili/0a/86/0a86713a99624d29d62890b40688eec48161cdd8-c25c069323e7a26f002d21496dd1def73284b004.png"
-                                                 alt="">
-                                            <div class="title">农查查</div>
-
-                                            <div class="rating">
-                                                <span class="line"></span>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star start" aria-hidden="true"></i>
-                                                <i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o start start-empty" aria-hidden="true"></i>
-                                                <span class="line"></span>
-                                            </div>
-
-                                            <div class="clearfix"></div>
-                                        </li>
-                                    </ul>
-                                </div>
-
+                            <div class="box-content">
+                                @include('widgets.wxapp_newest')
                             </div>
                         </div>
 
