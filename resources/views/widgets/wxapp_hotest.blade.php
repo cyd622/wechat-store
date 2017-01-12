@@ -4,7 +4,7 @@
             <li>
                 <a href="{{ route('wxapp.show', [$wxapp->id, $wxapp->name]) }}">
                     <img src="{{ qiniu_cdn($wxapp->icon) }}"
-                         alt="{{ $wxapp->title }}">
+                         alt="{{ $wxapp->title }}微信小程序">
                     <div class="title">{{ $wxapp->title }}</div>
 
                     <div class="starts">
