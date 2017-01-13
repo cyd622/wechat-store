@@ -46,7 +46,7 @@ class WxappController extends ApiController
 
         $data = $request->all();
 
-        if(!$data['screens']) {
+        if(!$data['screens'] || !$data['qrcode'] || !$data['icon']) {
             Log::error('错误，缺少 screenshots 参数');
             abort(400);
         }
