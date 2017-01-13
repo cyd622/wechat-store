@@ -70,8 +70,8 @@
                                         <div class="col-sm-3 score-container">
                                             <div class="score">{{ $currentWxapp->rating }}</div>
                                             <div class="score-container-star-rating">
-                                                <div class="starts">
-                                                    {!! $currentWxapp->present()->genStarts() !!}
+                                                <div class="stars">
+                                                    {!! $currentWxapp->present()->genStars() !!}
                                                 </div>
                                             </div>
                                             <div class="reviews-stats">
@@ -118,14 +118,31 @@
 
                                         <div class="clearfix"></div>
                                     </div>
-
-                                    <div class="comment-list">
-
-                                    </div>
                                 </div>
 
                             </div>
+
+
+                            <div class="box">
+                                <div class="box-header">
+                                    <h2>编辑评价</h2>
+                                </div>
+
+                                <div class="box-content">
+                                    <div class="comment-post">
+                                        @include('pages.partials.comment_poster')
+                                    </div>
+
+                                    <div class="comment-list">
+                                        <h3><span>评分列表</span></h3>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
 

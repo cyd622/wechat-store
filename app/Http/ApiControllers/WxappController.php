@@ -45,6 +45,12 @@ class WxappController extends ApiController
         Log::debug('wxapp 入库接口');
 
         $data = $request->all();
+
+        if(!$data['screens']) {
+            Log::error('错误，缺少 screenshots 参数');
+            abort(400);
+        }
+
         $data = array_merge($data, [
             'rating' => 0, 'likes' => 0, 'status' => 1,
             'name' => implode('-', $this->py->convert($data['title']))

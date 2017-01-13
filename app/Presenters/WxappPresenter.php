@@ -40,7 +40,7 @@ class WxappPresenter extends Presenter
         return $html;
     }
 
-    public function genStarts()
+    public function genStars()
     {
         $rating = sprintf('%.2f', $this->rating);
         list($rInteger, $rDecimal) = explode('.', $rating);

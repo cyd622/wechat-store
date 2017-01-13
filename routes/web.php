@@ -30,6 +30,8 @@ Route::get('/cate/{tagId}', 'PagesController@tag')->name('tag');
 Route::get('/xiaochengxu/{id}', 'PagesController@show')->name('detail');
 Route::get('/xiaochengxu/{id}/{name}', 'PagesController@show')->name('wxapp.show');
 Route::get('/search', 'PagesController@search')->name('search');
+Route::get('/articles', 'PagesController@news')->name('articles');
+Route::get('/article/{id}', 'PagesController@article')->name('article');
 
 
 /**

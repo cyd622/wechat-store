@@ -5,8 +5,8 @@
 
     <div class="pull-right">
         <div class="rating">
-            <div class="starts">
-                {!! $currentWxapp->present()->genStarts() !!}
+            <div class="stars">
+                {!! $currentWxapp->present()->genStars() !!}
             </div>
 
             <div class="count">

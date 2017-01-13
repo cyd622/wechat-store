@@ -6,9 +6,9 @@
                      alt="{{ $wxapp->title }}">
                 <div class="title">{{ $wxapp->title }}</div>
 
-                <div class="starts">
+                <div class="stars">
                     <span class="line"></span>
-                    {!! $wxapp->present()->genStarts() !!}
+                    {!! $wxapp->present()->genStars() !!}
                     <span class="line"></span>
                 </div>
 

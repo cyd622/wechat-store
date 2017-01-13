@@ -6,8 +6,8 @@
     <div class="info pull-left">
         <h1 class="title">{{ $currentWxapp->title }}</h1>
 
-        <div class="starts">
-            {!! $currentWxapp->present()->genStarts() !!}
+        <div class="stars">
+            {!! $currentWxapp->present()->genStars() !!}
         </div>
 
         <div class="tags">

@@ -18,7 +18,6 @@ class PagesController extends Controller
     public function __construct()
     {
         $this->tagRepository = App::make(TagRepositoryEloquent::class);
-
         $this->wxappRepository = App::make(WxappRepositoryEloquent::class);
         $this->wxappRepository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
 
@@ -60,6 +59,17 @@ class PagesController extends Controller
             abort(404);
 
         return view('pages.show', compact('currentWxapp'));
+    }
+
+    public function news()
+    {
+
+        return view('pages.news');
+    }
+
+    public function article()
+    {
+
     }
 
     public function wiki()

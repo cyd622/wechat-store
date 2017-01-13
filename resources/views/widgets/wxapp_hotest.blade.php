@@ -7,9 +7,9 @@
                          alt="{{ $wxapp->title }}微信小程序">
                     <div class="title">{{ $wxapp->title }}</div>
 
-                    <div class="starts">
+                    <div class="stars">
                         <span class="line"></span>
-                        {!! $wxapp->present()->genStarts() !!}
+                        {!! $wxapp->present()->genStars() !!}
                         <span class="line"></span>
                     </div>
 

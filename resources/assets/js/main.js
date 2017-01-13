@@ -15,6 +15,7 @@
             self.initToolTips()
             self.initPopup()
             self.initTagsSelector()
+            self.initStarSelector()
         },
 
         initToolTips: function () {
@@ -54,6 +55,15 @@
                     console.log(html)
                     $(".tags .selected").append(html)
                 }
+            })
+        },
+
+        initStarSelector: function () {
+            var self = this
+
+            $(document).on("click", ".rating-selector star", function () {
+                var that = $(this)
+                console.log(that.attr('data-index'))
             })
         }
 
