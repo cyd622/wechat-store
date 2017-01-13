@@ -1,6 +1,6 @@
 <div class="app-info">
     <div class="icon pull-left">
-        <img src="{{ qiniu_cdn($currentWxapp->icon) }}" />
+        <img src="{{ qiniu_cdn($currentWxapp->icon) }}" alt="{{ $currentWxapp->title }}小程序logo"/>
     </div>
 
     <div class="pull-right">

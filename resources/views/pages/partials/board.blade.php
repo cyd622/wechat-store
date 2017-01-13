@@ -7,7 +7,7 @@
     </div>
 
     <div class="md-mainimg">
-        <img src="{{ cdn('images/bg_2.jpg') }}" />
+        <img src="{{ cdn('images/bg_2.jpg') }}" alt="提交小程序"/>
     </div>
 
     <div class="clearfix"></div>

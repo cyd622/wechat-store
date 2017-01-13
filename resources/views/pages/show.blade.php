@@ -34,9 +34,9 @@
                                 <div class="screen-shots">
                                     <div class="images-list">
                                         <ul>
-                                            @foreach($currentWxapp->screenShots as $item)
+                                            @foreach($currentWxapp->screenShots as $i => $item)
                                                 <li class="screen-img">
-                                                    <img src="{{ qiniu_cdn($item->image) }}" />
+                                                    <img src="{{ qiniu_cdn($item->image) }}" alt="{{ $currentWxapp->title }}小程序截图-{{ $i }}"/>
                                                 </li>
                                             @endforeach
                                         </ul>
@@ -141,7 +141,7 @@
                                 
                                 <div class="qrcode">
                                     <p>使用微信扫码体验</p>
-                                    <img src="{{ qiniu_cdn($currentWxapp->qrcode) }}" alt="">
+                                    <img src="{{ qiniu_cdn($currentWxapp->qrcode) }}" alt="{{ $currentWxapp->title }}小程序二维码">
                                 </div>
                             </div>
                         </div>
