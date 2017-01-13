@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="baidu-site-verification" content="nhaOUVIFwL" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@section('title')微信小程序商店，体验最新最好玩的微信小程序@show - 微信小程序 | WX小程序 - Powered by WxStore</title>
+    <title>@section('title')体验最新最好玩的微信小程序@show - 微信小程序商店 - Powered by WxStore</title>
     <meta name="keywords" content="@section('keywords') @show微信,小程序,微信小程序,微信小程序商店,wewx,wx应用商店,微信应用号,微信小程序导航,微信应用,最新的小程序,微信小程序开发,微信小程序发布平台,市场,商店,导航,排行榜" />
     <meta name="author" content="WxStore" />
     <meta name="description" content="@section('description')WX小程序，微信小程序商店。订阅小程序开发资讯，第一时间体验最新最好的微信小程序。这里也是小程序发布平台，您可以在这里发布您的小程序，让你的小程序无人不知。@show" />
