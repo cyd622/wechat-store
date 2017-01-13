@@ -1,6 +1,5 @@
 #app {
   .mobile {
-
     .navbar {
       .logo {
         margin-top: 0;
@@ -44,13 +43,21 @@
     }
 
     .app-detail {
+
+      .container {
+        padding:0;
+
+        .row {
+          margin: 0 !important;
+        }
+
+        .row > div {
+          padding: 0;
+        }
+      }
+
       margin-top: 15px;
       margin-bottom: 15px;
-
-      .row {
-        margin-left:-30px;
-        margin-right:-30px;
-      }
 
       .app-info {
         padding: 10px;

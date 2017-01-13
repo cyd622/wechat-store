@@ -1,4 +1,4 @@
-<div class="rating-selector">
+<div class="rating-selector mb-10">
     <span>评分 </span>
 
     <div class="stars">

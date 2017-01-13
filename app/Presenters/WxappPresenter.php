@@ -45,34 +45,34 @@ class WxappPresenter extends Presenter
         $rating = sprintf('%.2f', $this->rating);
         list($rInteger, $rDecimal) = explode('.', $rating);
 
-        $fullStarts = $rInteger;
-        $halfStarts = 0;
-        $emptyStarts = 0;
+        $fullStars = $rInteger;
+        $halfStars = 0;
+        $emptyStars = 0;
 
         if((int)$rDecimal == 0) {
-            $emptyStarts = 5 - $fullStarts;
+            $emptyStars = 5 - $fullStars;
         } else {
-            $halfStarts = 1;
-            $emptyStarts = 5 - 1 - $fullStarts;
+            $halfStars = 1;
+            $emptyStars = 5 - 1 - $fullStars;
         }
 
         $html = '';
 
         $i = 0;
-        while($i < $fullStarts) {
-            $html .= '<i class="fa fa-star start" aria-hidden="true"></i>';
+        while($i < $fullStars) {
+            $html .= '<i class="fa fa-star star" aria-hidden="true"></i>';
             $i++;
         }
 
         $i = 0;
-        while($i < $halfStarts) {
+        while($i < $halfStars) {
             $html .= '<i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>';
             $i++;
         }
 
         $i = 0;
-        while($i < $emptyStarts) {
-            $html .= '<i class="fa fa-star-o start start-empty" aria-hidden="true"></i>';
+        while($i < $emptyStars) {
+            $html .= '<i class="fa fa-star-o star start-empty" aria-hidden="true"></i>';
             $i++;
         }
 

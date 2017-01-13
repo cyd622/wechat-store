@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="baidu-site-verification" content="nhaOUVIFwL" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>@section('title')@show- 微信小程序商店 - Powered by WxStore </title>
     <meta name="keywords" content="@section('keywords') @show微信,小程序,微信小程序,微信小程序商店,wewx,wx应用商店,微信应用号,微信小程序导航,微信应用,最新的小程序,微信小程序开发,微信小程序发布平台,市场,商店,导航,排行榜" />
     <meta name="author" content="WxStore" />

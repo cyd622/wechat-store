@@ -130,13 +130,45 @@
 
                                 <div class="box-content">
                                     <div class="comment-post">
-                                        @include('pages.partials.comment_poster')
+                                        @if(Auth::check())
+                                            @include('pages.partials.comment_poster')
+                                        @else
+                                            @include('pages.partials.comment_without_login')
+                                        @endif
                                     </div>
 
                                     <div class="comment-list">
-                                        <h3><span>评分列表</span></h3>
+                                        <h3><span>评价列表</span></h3>
 
+                                        <ul>
 
+                                            <li class="comment-item">
+                                                <div class="comment-user-info">
+                                                    <img src="http://media.ifanrusercontent.com/media/tavatar/2d/e8/2de88c6c115800c44173eb2fd8819ac9d79483da.jpg"
+                                                            alt="迷失时光">
+                                                </div>
+
+                                                <div class="comment-info">
+                                                    <div class="comment-header">
+                                                        <span class="nickname">迷失时光</span>
+                                                        <span class="dot"></span>
+                                                        <span class="time">30分钟前</span>
+                                                    </div>
+
+                                                    <div class="rating stars" data-score="5">
+
+                                                    </div>
+
+                                                    <div class="comment-content">
+                                                        结论：界面美观，体验流畅
+                                                    </div>
+
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </div>

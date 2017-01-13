@@ -6,10 +6,20 @@
         init: function () {
             var self = this
 
-            self.siteBootUp()
+            console.log('     __   __   __  _________  __   __   __  __       __         _________   __          __')
+            console.log('    / /  / /  / / / _______/ / /  / /  / / / /      / /        / _______/  / /         / /')
+            console.log('   / /  / /  / / / /______  / /  / /  / /   / /    / /        / /         / / / /     / /')
+            console.log('  / /  / /  / / / /______/ / /  / /  / /     / // /          / /         / /   / /   / /')
+            console.log(' / /__/ /__/ / / /_______ / /__/ /__/ /   / /    / /    __  / /_______  / /     / / / /')
+            console.log(' \\\__________/  \\\________/ \\\__________/   /_/      /_/  /_/  \\\________/ /_/         /_/')
+
+            console.log('wxstore 官网 http://wewx.cn/wxstore')
+            console.log('WxStore 是国内首款免费开源的小程序应用商店系统。')
+
+            self.bootUp()
         },
 
-        siteBootUp: function () {
+        bootUp: function () {
             var self = this;
 
             self.initToolTips()
@@ -61,12 +71,19 @@
         initStarSelector: function () {
             var self = this
 
-            $(document).on("click", ".rating-selector star", function () {
+            $(document).on("click", ".rating-selector .star", function () {
                 var that = $(this)
+                $(".rating-selector .star").removeClass('fa-star').addClass('fa-star-o')
+
+                $.each($(".rating-selector .star"), function (i, d) {
+                    if(i <= that.attr('data-index')) {
+                        $(this).addClass('fa-star').removeClass('fa-star-o')
+                    }
+                })
+
                 console.log(that.attr('data-index'))
             })
         }
-
     }
 
     window.Wewx = Wewx

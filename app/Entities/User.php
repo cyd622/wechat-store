@@ -2,6 +2,7 @@
 
 namespace App\Entities;
 
+use Laracasts\Presenter\PresentableTrait;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,6 +10,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable, HasApiTokens;
+    use PresentableTrait;
+
+    protected $presenter = 'App\Presenters\UserPresenter';
 
     /**
      * The attributes that are mass assignable.
