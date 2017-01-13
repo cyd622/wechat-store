@@ -1,6 +1,6 @@
 @extends('layouts.pages')
 
-@section('title'){{ $currentWxapp->title }}：在 微信小程序商店 上的内容 - @parent @stop
+@section('title'){{ $currentWxapp->title }}小程序,{{ $currentWxapp->title }}小程序二维码, @parent @stop
 
 @section('description')
 阅读评论、比较用户评分、查看小程序屏幕快照并进一步了解“{{ $currentWxapp->title }}”。 微信扫描“{{ $currentWxapp->title }}”小程序二维码，即刻在微信上尽情体验“{{ $currentWxapp->title }}”小程序。
@@ -34,9 +34,9 @@
                                 <div class="screen-shots">
                                     <div class="images-list">
                                         <ul>
-                                            @foreach($currentWxapp->screenShots as $i => $item)
+                                            @foreach($currentWxapp->screenShots as $item)
                                                 <li class="screen-img">
-                                                    <img src="{{ qiniu_cdn($item->image) }}" alt="{{ $currentWxapp->title }}小程序截图-{{ $i }}"/>
+                                                    <img src="{{ qiniu_cdn($item->image) }}" />
                                                 </li>
                                             @endforeach
                                         </ul>
@@ -141,7 +141,7 @@
                                 
                                 <div class="qrcode">
                                     <p>使用微信扫码体验</p>
-                                    <img src="{{ qiniu_cdn($currentWxapp->qrcode) }}" alt="{{ $currentWxapp->title }}小程序二维码">
+                                    <img src="{{ qiniu_cdn($currentWxapp->qrcode) }}" alt="">
                                 </div>
                             </div>
                         </div>
