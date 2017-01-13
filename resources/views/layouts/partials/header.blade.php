@@ -58,7 +58,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="{{ route('index') }}">商店首页</a></li>
-                            <li><a href="articles">资讯</a></li>
+                            <li><a href="#">资讯</a></li>
                             <li><a href="#">小程序社区</a></li>
                             <li><a href="{{ route('apps.create') }}" class="red-dot">提交小程序<i class="fa fa-circle dot hidden-xs" aria-hidden="true"></i></a></li>
                         </ul>
