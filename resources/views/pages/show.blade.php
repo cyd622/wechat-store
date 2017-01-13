@@ -36,7 +36,7 @@
                                         <ul>
                                             @foreach($currentWxapp->screenShots as $i => $item)
                                                 <li class="screen-img">
-                                                    <img src="{{ qiniu_cdn($item->image) }}" alt="{{ $currentWxapp->title }}微信小程序屏幕截图-{{ $i }}" />
+                                                    <img src="{{ qiniu_cdn($item->image) }}" alt="{{ $currentWxapp->title }}微信小程序屏幕截图-{{ $i + 1 }}" />
                                                 </li>
                                             @endforeach
                                         </ul>
