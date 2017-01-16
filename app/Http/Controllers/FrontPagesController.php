@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\App;
 use BrowserDetect;
 
 
-class PagesController extends Controller
+class FrontPagesController extends Controller
 {
     protected $tagRepository;
     protected $wxappRepository;
@@ -68,6 +68,11 @@ class PagesController extends Controller
     }
 
     public function article()
+    {
+
+    }
+
+    public function comment()
     {
 
     }

@@ -144,7 +144,7 @@
 
                                             <li class="comment-item">
                                                 <div class="comment-user-info">
-                                                    <img src="http://media.ifanrusercontent.com/media/tavatar/2d/e8/2de88c6c115800c44173eb2fd8819ac9d79483da.jpg"
+                                                    <img src="{{ cdn('images/default_avatar.png') }}"
                                                             alt="迷失时光">
                                                 </div>
 
