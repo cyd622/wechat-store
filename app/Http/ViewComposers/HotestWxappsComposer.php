@@ -9,6 +9,7 @@
 namespace App\Http\ViewComposers;
 
 use App\Criteria\HotestWxappsCriteria;
+use Doctrine\Common\Cache\Cache;
 use Illuminate\View\View;
 use App\Repositories\WxappRepositoryEloquent;
 
@@ -25,8 +26,10 @@ class HotestWxappsComposer
 
     public function compose(View $view)
     {
-        $wxapps = $this->wxappRepository->with('tags')
-            ->paginate(10);
+        $wxapps = Cache::remember('wxapp_hot_list', 10, function () {
+            return $wxapps = $this->wxappRepository->with('tags')
+                ->paginate(10);
+        });
 
         $view->with('wxapps', $wxapps);
     }
