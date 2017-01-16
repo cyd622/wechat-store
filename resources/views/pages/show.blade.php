@@ -137,39 +137,42 @@
                                         @endif
                                     </div>
 
+                                    @if(count($currentWxapp->comments) > 1)
                                     <div class="comment-list">
                                         <h3><span>评价列表</span></h3>
 
                                         <ul>
 
+                                            @foreach($currentWxapp->comments as $comment)
                                             <li class="comment-item">
                                                 <div class="comment-user-info">
-                                                    <img src="{{ cdn('images/default_avatar.png') }}"
-                                                            alt="迷失时光">
+                                                    <img src="{{ $comment->user->present()->getAvatar() }}" alt="{{ $comment->user->name }}">
                                                 </div>
 
                                                 <div class="comment-info">
                                                     <div class="comment-header">
-                                                        <span class="nickname">迷失时光</span>
+                                                        <span class="nickname">{{ $comment->user->name }}</span>
                                                         <span class="dot"></span>
-                                                        <span class="time">30分钟前</span>
+                                                        <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
                                                     </div>
 
                                                     <div class="rating stars" data-score="5">
-
+                                                        {!! $comment->present()->genStars() !!}
                                                     </div>
 
                                                     <div class="comment-content">
-                                                        结论：界面美观，体验流畅
+                                                        {{ $comment->comment }}
                                                     </div>
 
                                                 </div>
                                             </li>
+                                            @endforeach
 
                                         </ul>
 
                                         <div class="clearfix"></div>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
 

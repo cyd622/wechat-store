@@ -81,6 +81,7 @@
                     }
                 })
 
+                $(".rating-selector input[name=rating]").val(parseInt(that.attr('data-index')) + 1)
                 console.log(that.attr('data-index'))
             })
         }

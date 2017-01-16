@@ -3,7 +3,7 @@
 
 @section('title')
     @if(isset($currentTag))
-        {{$currentTag->title}}微信小程序大全 @parent
+        {{ $currentTag->title }}微信小程序大全 @parent
     @else
         WX小程序商店，体验最新最好玩的微信小程序@parent
     @endif
@@ -16,8 +16,6 @@
 
         <div class="container">
             <div class="row">
-
-
                 <div class="clearfix"></div>
             </div>
 

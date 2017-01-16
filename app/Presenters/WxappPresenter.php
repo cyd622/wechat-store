@@ -5,6 +5,7 @@ namespace App\Presenters;
 use App\Repositories\UserRepositoryEloquent;
 use App\Transformers\WxappTransformer;
 use Laracasts\Presenter\Presenter;
+use App\Presenters\Traits\GenStars;
 
 
 /**
@@ -14,6 +15,9 @@ use Laracasts\Presenter\Presenter;
  */
 class WxappPresenter extends Presenter
 {
+
+    use GenStars;
+
     /**
      * Transformer
      *
@@ -34,45 +38,6 @@ class WxappPresenter extends Presenter
             if($max && $i >= $max)
                 break;
 
-            $i++;
-        }
-
-        return $html;
-    }
-
-    public function genStars()
-    {
-        $rating = sprintf('%.2f', $this->rating);
-        list($rInteger, $rDecimal) = explode('.', $rating);
-
-        $fullStars = $rInteger;
-        $halfStars = 0;
-        $emptyStars = 0;
-
-        if((int)$rDecimal == 0) {
-            $emptyStars = 5 - $fullStars;
-        } else {
-            $halfStars = 1;
-            $emptyStars = 5 - 1 - $fullStars;
-        }
-
-        $html = '';
-
-        $i = 0;
-        while($i < $fullStars) {
-            $html .= '<i class="fa fa-star star" aria-hidden="true"></i>';
-            $i++;
-        }
-
-        $i = 0;
-        while($i < $halfStars) {
-            $html .= '<i class="fa fa-star-half-o star star-half" aria-hidden="true"></i>';
-            $i++;
-        }
-
-        $i = 0;
-        while($i < $emptyStars) {
-            $html .= '<i class="fa fa-star-o star start-empty" aria-hidden="true"></i>';
             $i++;
         }
 

@@ -26,6 +26,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ cdn(elixir('css/app.css')) }}">
+    <link href="{{ cdn('vendor/messenger/css/messenger.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ cdn('vendor/messenger/css/messenger-theme-flat.css') }}" type="text/css" rel="stylesheet" />
 
     @yield('styles')
 
@@ -53,6 +55,7 @@
 </div>
 
 @include('layouts.partials.script')
+@include('flash::message')
 
 </body>
 </html>

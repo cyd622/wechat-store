@@ -32,3 +32,6 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+<script src="{{ cdn('vendor/messenger/js/messenger.js') }}"></script>
+<script src="{{ cdn('vendor/messenger/js/messenger-theme-flat.js') }}"></script>
