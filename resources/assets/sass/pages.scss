@@ -91,6 +91,7 @@
     background: #ffffff;
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
 
     .likes {
       padding: 10px;
@@ -106,6 +107,7 @@
         color: #333;
         font-size: 20px;
         line-height: 1em;
+        cursor: pointer;
       }
     }
 
@@ -143,6 +145,26 @@
         margin: 3px;
       }
     }
+
+    .qrcode-box {
+      position: absolute;
+      right: 10px;
+      top:35px;
+      border:1px solid #eee;
+      background: #FFFFFF;
+      width:170px;
+      padding:10px;
+      box-shadow: 0 4px 6px -2px rgba(0,0,0,.1);
+      display: none;
+
+      img {
+        width:100%;
+      }
+    }
+  }
+
+  .app-item:hover {
+    box-shadow: 0 24px 30px -12px rgba(0,0,0,.2);
   }
 }
 

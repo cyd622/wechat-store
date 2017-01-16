@@ -35,6 +35,18 @@
         {!! $wxapp->present()->genTags($browserType == 'mobile' ? 2 : 3) !!}
     </div>
 
+    <div class="qrcode-box">
+        <img src="{{ qiniu_cdn($wxapp->qrcode) }}" alt="{{ $wxapp->title }}小程序二维码" />
+    </div>
+
+    @if(strpos($_SERVER['HTTP_USER_AGENT'], 'spider'))
+    <div>
+    @else
+    <div class="desc" style="display: none">
+    @endif
+        {{ $wxapp->description }}
+    </div>
+
     <div class="clearfix"></div>
 </div>
 

@@ -26,6 +26,7 @@
             self.initPopup()
             self.initTagsSelector()
             self.initStarSelector()
+            self.initQrcode()
         },
 
         initToolTips: function () {
@@ -83,6 +84,14 @@
 
                 $(".rating-selector input[name=rating]").val(parseInt(that.attr('data-index')) + 1)
                 console.log(that.attr('data-index'))
+            })
+        },
+
+        initQrcode: function () {
+            $(".app-item .likes .qrcode").hover(function () {
+                $(this).parents(".app-item").find(".qrcode-box").show()
+            }, function () {
+                $(this).parents(".app-item").find(".qrcode-box").hide()
             })
         }
     }
