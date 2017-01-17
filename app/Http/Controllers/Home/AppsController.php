@@ -57,7 +57,7 @@ class AppsController extends Controller implements CreatorListener
         Flash::error($errors);
         Log::error($errors);
 
-        return redirect(route('apps.index'));
+        return redirect(route('apps.create'));
     }
 
     public function creatorSucceed($wxapp)
@@ -66,7 +66,7 @@ class AppsController extends Controller implements CreatorListener
         Log::debug($wxapp);
 
         Flash::success(lang('Operation succeeded.'));
-        return redirect(route('apps.index'));
+        return redirect(route('user.index'));
     }
 
 }
