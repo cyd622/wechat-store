@@ -46,7 +46,7 @@ elixir(mix => {
     if (!production) {
         mix.browserSync({
             proxy: 'wewx.app',
-            browser: ['google-chrome', 'firefox'],
+            browser: ['google-chrome'],
             logConnections  : false,
             reloadOnRestart : false,
             notify          : false

@@ -3,9 +3,9 @@
 
 @section('title')
     @if(isset($currentTag))
-        {{$currentTag->title}}微信小程序大全 @parent
+{{$currentTag->title}}微信小程序大全 @parent
     @else
-        小程序商店，体验最新最好玩的微信小程序@parent
+小程序商店，体验最新最好玩的微信小程序@parent
     @endif
 @stop
 

@@ -122,12 +122,12 @@ EOT;
 
 }
 
-function gen_nodata($showIndexLink = true)
+function gen_nodata($msg = '服务器君什么都没找到', $showIndexLink = true)
 {
     $html = <<<EOT
     <div class="nothing">
         <h3>%>_<%</h3>
-        <p>服务器君什么都没找到</p>
+        <p>{$msg}</p>
 EOT;
 
     if($showIndexLink) {
@@ -148,4 +148,22 @@ function isSpider()
     }
 
     return false;
+}
+
+function getTa($userId, $curUserId)
+{
+    if(isMe($userId, $curUserId)) {
+        return '我';
+    } else {
+        return 'Ta';
+    }
+}
+
+function isMe($userId, $curUserId)
+{
+    if($userId == $curUserId) {
+        return true;
+    } else {
+        return false;
+    }
 }

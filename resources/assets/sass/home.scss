@@ -10,7 +10,7 @@
     height:260px;
     text-align: center;
     position: relative;
-    padding-top:50px;
+    padding-top:60px;
 
     .avatar {
       img {
@@ -27,5 +27,31 @@
 
   .main-content {
     min-height: 500px;
+  }
+
+  .user-wxapp-list {
+    .wxapp-item {
+      margin-bottom: 15px;
+
+      .icon {
+        float: left;
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      .info {
+        float: left;
+        margin-left:20px;
+
+        h3 {
+          font-size:14px;
+          margin:5px 0;
+          padding:0;
+        }
+      }
+    }
   }
 }

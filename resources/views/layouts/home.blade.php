@@ -1,5 +1,6 @@
 @extends('layouts.pages')
 
+@section('title'){{ $user->name }}的主页@parent @endsection
 
 @section('content')
 
