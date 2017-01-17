@@ -140,3 +140,12 @@ EOT;
 
     return $html;
 }
+
+function isSpider()
+{
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'spider') || strpos($_SERVER['HTTP_USER_AGENT'], 'bot')) {
+        return true;
+    }
+
+    return false;
+}

@@ -39,7 +39,7 @@
         <img src="{{ qiniu_cdn($wxapp->qrcode) }}" alt="{{ $wxapp->title }}小程序二维码" />
     </div>
 
-    @if(strpos($_SERVER['HTTP_USER_AGENT'], 'spider'))
+    @if(isSpider())
     <div>
     @else
     <div class="desc" style="display: none">
