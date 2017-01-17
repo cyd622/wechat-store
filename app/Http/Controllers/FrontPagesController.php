@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Entities\WxappRating;
 use App\Http\Requests\CommentCreateRequest;
 use App\Repositories\TagRepositoryEloquent;
+use App\Repositories\UserRepositoryEloquent;
 use App\Repositories\WxappRatingRepositoryEloquent;
 use App\Repositories\WxappRepositoryEloquent;
 use Illuminate\Http\Request;
@@ -96,8 +97,10 @@ class FrontPagesController extends Controller
     public function users()
     {
 
+        $userRepository = App::make(UserRepositoryEloquent::class);
+        $users = $userRepository->orderBy('id', 'desc')->paginate(36);
 
-        return view('pages.users');
+        return view('pages.users', compact('users'));
     }
 
     public function search(Request $request)
