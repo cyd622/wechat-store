@@ -16,7 +16,7 @@
                         @foreach($wxapps as $wxapp)
                             <div class="wxapp-item col-sm-6">
                                 <div class="icon">
-                                    <a href="{{ route('wxapp.show', $wxapp->id) }}"><img src="{{ qiniu_cdn($wxapp->icon) }}" alt="{{ $wxapp->title }}小程序" /></a>
+                                    <a href="{{ route('wxapp.show', [$wxapp->id, $wxapp->name]) }}"><img src="{{ qiniu_cdn($wxapp->icon) }}" alt="{{ $wxapp->title }}小程序" /></a>
                                 </div>
 
                                 <div class="info">
