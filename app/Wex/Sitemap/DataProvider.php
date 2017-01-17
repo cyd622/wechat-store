@@ -80,6 +80,7 @@ class DataProvider
         $static = [];
 
         $static[] = $this->getPage('index', 'daily', '1.0');
+        $static[] = $this->getPage('users', 'daily', '0.9');
 
         return $static;
     }
