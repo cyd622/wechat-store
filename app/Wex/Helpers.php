@@ -150,18 +150,18 @@ function isSpider()
     return false;
 }
 
-function getTa($userId, $curUserId)
+function getTa($user, $curUser)
 {
-    if(isMe($userId, $curUserId)) {
+    if(isMe($user, $curUser)) {
         return '我';
     } else {
         return 'Ta';
     }
 }
 
-function isMe($userId, $curUserId)
+function isMe($user, $curUser)
 {
-    if($userId == $curUserId) {
+    if($user && $curUser && $user->id == $curUser->id) {
         return true;
     } else {
         return false;
