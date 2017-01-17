@@ -25,7 +25,7 @@
                                 <div class="col-md-1 col-sm-2 col-xs-3">
                                     <div class="avatar">
                                         <a href="{{ route('user.show', $user->id) }}">
-                                            <img src="{{ qiniu_cdn($user->present()->getAvatar()) }}" alt="{{ $user->name }}" />
+                                            <img src="{{ $user->present()->getAvatar() }}" alt="{{ $user->name }}" />
                                         </a>
                                     </div>
                                 </div>
