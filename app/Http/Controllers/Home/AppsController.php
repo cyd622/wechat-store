@@ -11,6 +11,8 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WxappCreateRequest;
+use App\Repositories\WxappRepositoryEloquent;
+
 use Log;
 use Laracasts\Flash\Flash;
 use Wex\Listeners\CreatorListener;
@@ -18,10 +20,19 @@ use Wex\Listeners\CreatorListener;
 class AppsController extends Controller implements CreatorListener
 {
 
+    protected $wxappRepository;
+
+    public function __construct(WxappRepositoryEloquent $wxappRepository)
+    {
+
+        $this->wxappRepository = $wxappRepository;
+
+    }
+
     public function index()
     {
 
-        return view('home.apps.index');
+        return view('home.apps.index', compact('wxapps'));
     }
 
     public function create()

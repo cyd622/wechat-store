@@ -7,10 +7,18 @@
   }
 
   .home-page-header {
-    height:200px;
+    height:260px;
     text-align: center;
     position: relative;
-    padding-top:70px;
+    padding-top:50px;
+
+    .avatar {
+      img {
+        width: 80px;
+        height:80px;
+        border-radius: 5px;
+      }
+    }
 
     p.page-title {
       font-size:18px;

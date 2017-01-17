@@ -10,14 +10,37 @@ namespace App\Http\Controllers\Home;
 
 
 use App\Http\Controllers\Controller;
+use App\Repositories\UserRepositoryEloquent;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Repositories\WxappRepositoryEloquent;
+
 
 class UserController extends Controller
 {
+    protected $wxappRepository;
+    protected $userRepository;
 
-    public function index()
+    public function __construct(
+        WxappRepositoryEloquent $wxappRepository,
+        UserRepositoryEloquent $userRepository
+    )
     {
+        $this->wxappRepository = $wxappRepository;
+        $this->userRepository = $userRepository;
 
-        return view('home.user.index');
+        $this->middleware('auth')->except('show');
     }
 
+    public function index(Request $request)
+    {
+        return $this->show($request, Auth::id());
+    }
+
+    public function show(Request $request, $id)
+    {
+        $user = $this->userRepository->find($id);
+
+        return view('home.user.index', compact('wxapps', 'user'));
+    }
 }
