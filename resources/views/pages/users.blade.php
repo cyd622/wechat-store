@@ -27,6 +27,8 @@
                                         <a href="{{ route('user.show', $user->id) }}">
                                             <img src="{{ $user->present()->getAvatar() }}" alt="{{ $user->name }}" />
                                         </a>
+
+                                        <p>{{ $user->name }}</p>
                                     </div>
                                 </div>
 
