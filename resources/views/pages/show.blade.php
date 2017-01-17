@@ -186,7 +186,7 @@
                     <div class="app-sidebar">
                         <div class="box">
                             <div class="box-header">
-                                <h2>{{ $currentWxapp->title }}小程序二维码</h2>
+                                <h2>{{ $currentWxapp->title }}二维码</h2>
                             </div>
 
                             <div class="box-content">

@@ -93,9 +93,11 @@ class FrontPagesController extends Controller
         return redirect(route('detail', $id));
     }
 
-    public function wiki()
+    public function users()
     {
 
+
+        return view('pages.users');
     }
 
     public function search(Request $request)

@@ -31,6 +31,7 @@ Route::get('/xiaochengxu/{id}', 'FrontPagesController@show')->name('detail');
 Route::get('/xiaochengxu/{id}/{name}', 'FrontPagesController@show')->name('wxapp.show');
 Route::post('/xiaochengxu/{id}', 'FrontPagesController@comment')->name('wxapp.comment');
 Route::get('/search', 'FrontPagesController@search')->name('search');
+Route::get('/users', 'FrontPagesController@users')->name('users');
 Route::get('/articles', 'FrontPagesController@news')->name('articles');
 Route::get('/article/{id}', 'FrontPagesController@article')->name('article');
 
