@@ -492,7 +492,9 @@
 
 
 .user-list {
-  text-align: center;
+  .box-content {
+    text-align: center;
+  }
 
   .avatar {
     margin-bottom:20px;
