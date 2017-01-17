@@ -22,7 +22,7 @@
 
                             @foreach($users as $user)
 
-                                <div class="col-md-1 col-sm-2 col-xs-3">
+                                <div class="col-md-2 col-sm-2 col-xs-3">
                                     <div class="avatar">
                                         <a href="{{ route('user.show', $user->id) }}">
                                             <img src="{{ $user->present()->getAvatar() }}" alt="{{ $user->name }}" />
