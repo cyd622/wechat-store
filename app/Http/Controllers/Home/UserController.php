@@ -42,7 +42,7 @@ class UserController extends Controller
         $user = $this->userRepository->find($id);
         $wxapps = $this->wxappRepository->scopeQuery(function ($query) use ($id) {
             return $query->where('user_id', $id);
-        })->paginate(10);
+        })->orderBy('id', 'desc')->paginate(10);
 
         return view('home.user.index', compact('wxapps', 'user'));
     }
