@@ -12,4 +12,8 @@ class Post extends Model implements Transformable
 
     protected $fillable = [];
 
+    public function category()
+    {
+        $this->belongsTo('App\Entities\Category');
+    }
 }
