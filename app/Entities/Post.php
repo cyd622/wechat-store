@@ -10,7 +10,10 @@ class Post extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id', 'title','name', 'content',
+        'source', 'source_url', 'source_id', 'image',
+    ];
 
     public function category()
     {

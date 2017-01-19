@@ -29,7 +29,7 @@ class PostController extends ApiController
     public function store(ArticleApiCreateRequest $request)
     {
         $data = $request->all();
-        $data->name = implode('-', $this->py->convert($data['title']));
+        $data['name'] = join('-', $this->py->convert($data['title']));
 
         $article = $this->postRepository->updateOrCreate([
             'source' => $data['source'],
